@@ -139,8 +139,8 @@ function Home() {
 
         {/* ✅ Z-Axis Scroll Section */}
         <div
-          ref={containerRef}
           id="about"
+          ref={containerRef}
           className="perspective-container bg-[#FFB91A] w-full h-screen relative overflow-hidden"
         >
           {PanelComponents.map((Component, i) => (
