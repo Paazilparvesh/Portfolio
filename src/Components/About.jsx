@@ -24,9 +24,11 @@ const skills = [
 const AboutSection = () => {
   const sectionRef = useRef(null);
   const barsRef = useRef([]);
+  const lottieRef = useRef(null); // 🔥 Add Lottie reference
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Skill Bar Animation
       barsRef.current.forEach((bar, i) => {
         gsap.fromTo(
           bar,
@@ -43,6 +45,18 @@ const AboutSection = () => {
           }
         );
       });
+
+      // 🔥 Lottie Animation Trigger on Scroll
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top bottom+=80", // Start when the section is 100px from the bottom
+        once: true, // play only once
+        onEnter: () => {
+          if (lottieRef.current) {
+            lottieRef.current.play();
+          }
+        },
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -54,8 +68,13 @@ const AboutSection = () => {
       className="w-full h-screen bg-[#a95847] flex items-start justify-between pt-24 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
       {/* 📸 Image */}
-      <div className=" w-full lg:w-1/2 h-full flex items-start justify-center xl:pt-24 xl:scale-125">
-        <Lottie animationData={lot} loop={false} autoplay={true} />
+      <div className="w-full lg:w-1/2 h-full flex items-start justify-center xl:pt-24 xl:scale-125">
+        <Lottie
+          lottieRef={lottieRef} // 🎯 connect to ref
+          animationData={lot}
+          autoplay={false} // ⛔ initially paused
+          loop={false}
+        />
       </div>
 
       {/* 📄 Text */}
@@ -68,14 +87,11 @@ const AboutSection = () => {
           <p>
             Hello, I'm Mohamed Safwan, a recent master's graduate in Retail
             Design at Elisava school of design and engineering, a spatial
-            designer and sometimes an amateur shutterbug. My passion lies in
-            creating designs that resonate with people and enhance convenience,
-            reflecting my deep interest in human and societal needs.
+            designer and sometimes an amateur shutterbug...
           </p>
           <p>
             Skilled in visual merchandising, space planning, and a piqued
-            interest in materials for sustainable design. Seeking to leverage my
-            expertise to contribute to a dynamic retail brand.
+            interest in materials for sustainable design...
           </p>
         </div>
 

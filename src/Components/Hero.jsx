@@ -108,8 +108,7 @@ const Hero = () => {
 
   return (
     <section
-      id="home"
-      className="relative flex justify-center items-center bg-[#FFB91A]  group w-full h-screen overflow-hidden"
+      className="relative flex justify-center items-center bg-[#FFB91A] group w-full h-screen overflow-hidden"
     >
       {/* 🔴 Animated Red Circle Play Button */}
       <div

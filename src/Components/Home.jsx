@@ -31,6 +31,7 @@
 // }
 // export default Home;
 
+
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -49,7 +50,11 @@ function Home() {
   const panelsRef = useRef([]);
   const horizontalRef = useRef(null);
 
-  const PanelComponents = [About, Experince]; // Only z-axis scroll here
+  // Define Z-axis panels with corresponding ids
+  const panelData = [
+    { id: "about", component: About },
+    { id: "education", component: Experince },
+  ];
 
   useEffect(() => {
     const panels = panelsRef.current;
@@ -72,8 +77,7 @@ function Home() {
         const progress = self.progress;
 
         panels.forEach((panel, i) => {
-          // Modify scroll timing to hold the first panel longer
-          const holdDuration = 0.5; // hold 50% of scroll for the first panel
+          const holdDuration = 0.5;
           let sectionProgress;
 
           if (i === 0) {
@@ -83,7 +87,7 @@ function Home() {
           }
 
           const distance = Math.abs(sectionProgress - i);
-          const clampedOpacity = distance < 1 ? 1 : 0; // hard cutoff
+          const clampedOpacity = distance < 1 ? 1 : 0;
           const clampedScale = gsap.utils.clamp(
             0.92,
             1,
@@ -103,8 +107,9 @@ function Home() {
         });
       },
     });
+
     setTimeout(() => {
-      ScrollTrigger.refresh(); // recalculates positions
+      ScrollTrigger.refresh();
     }, 100);
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -135,18 +140,20 @@ function Home() {
         <div className="relative z-50">
           <Header />
         </div>
-        <Hero />
+        <div id="home">
+          <Hero />
+        </div>
 
-        {/* ✅ Z-Axis Scroll Section */}
+        {/* ✅ Z-Axis Scroll Section with Unique IDs */}
         <div
-          id="about"
           ref={containerRef}
           className="perspective-container bg-[#FFB91A] w-full h-screen relative overflow-hidden"
         >
-          {PanelComponents.map((Component, i) => (
+          {panelData.map(({ id, component: Component }, i) => (
             <div
-              key={i}
-              className="panel w-full h-screen  absolute top-0 left-0 flex items-center justify-center pointer-events-auto"
+              key={id}
+              id={id} // 🔥 This makes each panel scrollable by ID
+              className="panel w-full h-screen absolute top-0 left-0 flex items-center justify-center pointer-events-auto"
               ref={(el) => (panelsRef.current[i] = el)}
             >
               <div className="w-full h-full flex justify-center items-center pointer-events-auto">
@@ -164,12 +171,15 @@ function Home() {
         >
           <div className="flex w-[200vw] h-full">
             <div
-              id="project"
+              id="projects"
               className="horizontal-panel w-screen h-full flex justify-center items-center"
             >
               <Project />
             </div>
-            <div className="horizontal-panel w-screen h-full flex justify-center items-center">
+            <div
+              id="contact"
+              className="horizontal-panel w-screen h-full flex justify-center items-center"
+            >
               <Contact />
             </div>
           </div>

@@ -8,7 +8,7 @@ import {
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full flex flex-col md:flex-row items-center justify-between bg-black text-[#fde3a7] px-8 md:px-20 py-20 gap-12">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between bg-black text-[#fde3a7] px-8 md:px-20 py-20 gap-12">
       {/* LEFT SIDE */}
       <div className="flex-1 flex flex-col justify-center">
         <h2 className="text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">

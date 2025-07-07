@@ -39,7 +39,6 @@ export default function ProjectsSection() {
 
   return (
     <section
-      id="projects"
       className="relative w-full min-h-screen bg-[#FFB91A] py-20 overflow-hidden flex justify-center items-center"
     >
       <style>
