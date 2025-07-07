@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+  }
+/* Hide scrollbar globally */
+html, body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+  
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+
+  .panel {
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+   .perspective-container {
+    perspective: 1800px;
+    overflow: hidden;
+  }
+
+
+  /* Add to <style> block */
+.hover-preview img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-preview:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(169, 88, 71, 0.3);
+}
+
+
+/* global.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
