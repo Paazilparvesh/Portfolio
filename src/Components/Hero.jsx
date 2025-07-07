@@ -9,9 +9,20 @@ const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    animateIntro();
+    animateIntro(); // run initially
     pointerFollower();
     splitHeroTitle();
+
+    // 🔁 Rerun animateIntro on resize
+    const handleResize = () => {
+      animateIntro();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -20,6 +31,33 @@ const Hero = () => {
 
   const animateIntro = () => {
     const overlay = overlayRef.current;
+    const screenWidth = window.innerWidth;
+
+    // Responsive values
+    const isMobile = screenWidth <= 640;
+    const isTablet = screenWidth > 640 && screenWidth <= 1024;
+    const isDesktop = screenWidth > 1024;
+    const isLaptop = screenWidth > 1024 && screenWidth <= 1440;
+    const isLargeScreen = screenWidth > 1440;
+
+    const size = isMobile
+      ? 80
+      : isTablet
+      ? 160
+      : isLaptop
+      ? 200
+      : isLargeScreen
+      ? 250
+      : 300;
+    const left = isMobile
+      ? "50%"
+      : isTablet
+      ? "48%"
+      : isLaptop
+      ? "46%"
+      : isLargeScreen
+      ? "44%"
+      : "42%";
 
     gsap.set(overlay, {
       scale: 1,
@@ -34,11 +72,11 @@ const Hero = () => {
       .timeline()
       .to(overlay, {
         duration: 1.2,
-        width: 200,
-        height: 200,
+        width: size,
+        height: size,
         borderRadius: "50%",
         top: "50%",
-        left: "45%",
+        left: left,
         xPercent: -50,
         yPercent: -50,
         ease: "power3.inOut",
@@ -46,7 +84,12 @@ const Hero = () => {
       .fromTo(
         overlay.querySelector("svg"),
         { autoAlpha: 0, scale: 0 },
-        { autoAlpha: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+        },
         ">-0.3"
       );
   };
@@ -107,14 +150,12 @@ const Hero = () => {
   };
 
   return (
-    <section
-      className="relative flex justify-center items-center bg-[#FFB91A] group w-full h-screen overflow-hidden"
-    >
+    <section className="relative flex justify-center items-center bg-[#FFB91A] group w-full h-screen overflow-hidden">
       {/* 🔴 Animated Red Circle Play Button */}
       <div
         ref={overlayRef}
         style={{ transformStyle: "preserve-3d", pointerEvents: "auto" }}
-        className="absolute top-0 left-0 z-20 -ml-[30px] md:-ml-[2px] w-full h-[180vh] bg-[#a95847] rounded-full flex items-center justify-center cursor-pointer animate-bounce transition duration-300"
+        className="absolute top-0 left-0 z-20 -ml-[30px] md:-ml-[2px] w-full h-[180vh]  bg-[#a95847] rounded-full flex items-center justify-center cursor-pointer animate-bounce transition duration-300"
         onClick={() => setShowVideo(true)}
       >
         <svg
@@ -127,13 +168,13 @@ const Hero = () => {
 
       {/* Background & Content */}
       <div className="relative w-full h-full flex items-center md:mt-5 bg-cover bg-center bg-no-repeat px-6 sm:px-10 md:px-20 pb-[140px] pt-[140px]">
-        <div className="relative z-10 max-w-screen-xl mx-auto w-1/2 text-center">
+        <div className="relative flex flex-col  z-10 max-w-screen-xl mx-auto w-1/2 text-center">
           {/* 🅰 Hero Title */}
           <p className="text-left text-white text-sm sm:text-base md:text-lg xl:text-3xl tracking-widest mb-2 space-grotesk">
             Hello, I’m
           </p>
 
-          <h1 className="hero-title text-left text-white text-[32px] sm:text-[60px] md:text-[90px] xl:text-[150px] font-bold tracking-[8px] leading-none uppercase transition-all duration-700 space-grotesk">
+          <h1 className="hero-title text-left text-white text-[32px] md:text-[80px] xl:text-[120px] 2xl:scale-105 font-bold tracking-[8px] leading-none uppercase transition-all duration-700 space-grotesk">
             Safwan Manas
           </h1>
 
@@ -141,7 +182,7 @@ const Hero = () => {
             SPATIAL DESIGNER
           </p>
         </div>
-        <img src={profile} alt="" className="w-1/2 px-20 mt-48" />
+        <img src={profile} alt="" className="w-full lg:w-1/2 px-20 mt-48" />
       </div>
 
       {/* 🔳 Video Modal */}

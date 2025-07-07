@@ -65,7 +65,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full h-screen bg-[#a95847] flex items-start justify-between pt-24 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
+      className="w-full h-screen bg-[#a95847] flex flex-col md:flex-row items-start justify-between pt-24 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
       {/* 📸 Image */}
       <div className="w-full lg:w-1/2 h-full flex items-start justify-center xl:pt-24 xl:scale-125">
