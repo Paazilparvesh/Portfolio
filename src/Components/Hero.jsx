@@ -58,6 +58,15 @@ const Hero = () => {
       : isLargeScreen
       ? "44%"
       : "42%";
+    const top = isMobile
+      ? "20%"
+      : isTablet
+      ? "48%"
+      : isLaptop
+      ? "46%"
+      : isLargeScreen
+      ? "44%"
+      : "42%";
 
     gsap.set(overlay, {
       scale: 1,
@@ -75,7 +84,7 @@ const Hero = () => {
         width: size,
         height: size,
         borderRadius: "50%",
-        top: "50%",
+        top: top,
         left: left,
         xPercent: -50,
         yPercent: -50,
@@ -167,22 +176,26 @@ const Hero = () => {
       </div>
 
       {/* Background & Content */}
-      <div className="relative w-full h-full flex items-center md:mt-5 bg-cover bg-center bg-no-repeat px-6 sm:px-10 md:px-20 pb-[140px] pt-[140px]">
-        <div className="relative flex flex-col  z-10 max-w-screen-xl mx-auto w-1/2 text-center">
+      <div className="relative w-full h-full flex items-center md:mt-5 bg-cover bg-center bg-no-repeat px-6 sm:px-10 md:px-20 pb-[140px] md:pt-[140px]">
+        <div className="relative flex flex-col items-start z-10 max-w-screen-xl mx-auto w-full lg:w-1/2 text-center">
           {/* 🅰 Hero Title */}
-          <p className="text-left text-white text-sm sm:text-base md:text-lg xl:text-3xl tracking-widest mb-2 space-grotesk">
+          <p className="w-full text-center md:text-left text-white font-helvetica text-sm sm:text-base md:text-lg xl:text-3xl tracking-widest mb-2">
             Hello, I’m
           </p>
 
-          <h1 className="hero-title text-left text-white text-[32px] md:text-[80px] xl:text-[120px] 2xl:scale-105 font-bold tracking-[8px] leading-none uppercase transition-all duration-700 space-grotesk">
+          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[90px] xl:text-[140px]  font-bold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
             Safwan Manas
           </h1>
 
-          <p className="mt-4 ml-12 text-[#a95847] text-xl sm:text-3xl lg:text-5xl text-center font-medium tracking-widest space-grotesk">
+          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#a95847] text-lg md:text-2xl xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
             SPATIAL DESIGNER
           </p>
         </div>
-        <img src={profile} alt="" className="w-full lg:w-1/2 px-20 mt-48" />
+        <img
+          src={profile}
+          alt=""
+          className="absolute bottom-0 left-0 md:static w-full lg:w-1/2 xl:px-20 mt-48 md:scale-125 "
+        />
       </div>
 
       {/* 🔳 Video Modal */}

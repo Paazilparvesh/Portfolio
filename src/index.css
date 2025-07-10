@@ -1,36 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import "tailwindcss";
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 /* Hide scrollbar globally */
-html, body {
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-  }
-  
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
-  
+html,
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
 
-  .panel {
-    transform-style: preserve-3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
-   .perspective-container {
-    perspective: 1800px;
-    overflow: hidden;
-  }
+.panel {
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.perspective-container {
+  perspective: 1800px;
+  overflow: hidden;
+}
 
-  /* Add to <style> block */
+/* Add to <style> block */
 .hover-preview img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -38,7 +38,6 @@ html, body {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(169, 88, 71, 0.3);
 }
-
 
 /* global.css */
 .no-scrollbar::-webkit-scrollbar {
@@ -49,20 +48,26 @@ html, body {
   scrollbar-width: none;
 }
 
-
-
-
 .space-grotesk {
   font-family: "Space Grotesk", sans-serif;
 }
 
 .font-sora {
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 .font-nunito {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .font-jakarta {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+.font-abel {
+  font-family: "Abel", sans-serif;
+}
+
+.font-helvetica {
+  font-family: Helvetica, Arial, sans-serif;
 }
