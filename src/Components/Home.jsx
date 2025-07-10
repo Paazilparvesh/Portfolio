@@ -160,10 +160,10 @@ function MobileLayout() {
       <section id="education" className="">
         <Experince />
       </section>
-      <section id="projects" className="min-h-screen bg-black text-white">
+      <section id="projects" className="">
         <Project />
       </section>
-      <section id="contact" className="min-h-screen pt-56 bg-black text-white">
+      <section id="contact" className="">
         <Contact />
       </section>
     </>

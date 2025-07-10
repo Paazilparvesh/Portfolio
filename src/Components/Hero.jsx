@@ -36,7 +36,7 @@ const Hero = () => {
     // Responsive values
     const isMobile = screenWidth <= 640;
     const isTablet = screenWidth > 640 && screenWidth <= 1024;
-    const isDesktop = screenWidth > 1024;
+    // const isDesktop = screenWidth > 1024;
     const isLaptop = screenWidth > 1024 && screenWidth <= 1440;
     const isLargeScreen = screenWidth > 1440;
 
@@ -183,7 +183,7 @@ const Hero = () => {
             Hello, I’m
           </p>
 
-          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[90px] xl:text-[150px]  font-bold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
+          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[90px] xl:text-[150px]  font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
             Safwan Manas
           </h1>
 

@@ -14,14 +14,14 @@ const ToggleSwitch = ({ activeIndex, setActiveIndex }) => {
       <label
         htmlFor="experience"
         onClick={() => setActiveIndex(0)}
-        className="z-10 w-1/2 py-10 text-center cursor-pointer"
+        className="z-10 w-1/2 py-10 text-center font-abel tracking-[3px] cursor-pointer"
       >
         Experience
       </label>
       <label
         htmlFor="education"
         onClick={() => setActiveIndex(1)}
-        className="z-10 w-1/2 py-10 text-center cursor-pointer"
+        className="z-10 w-1/2 py-10 text-center tracking-[3px] font-abel cursor-pointer"
       >
         Education
       </label>
