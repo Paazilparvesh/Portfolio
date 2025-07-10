@@ -183,18 +183,18 @@ const Hero = () => {
             Hello, I’m
           </p>
 
-          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[90px] xl:text-[140px]  font-bold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
+          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[90px] xl:text-[150px]  font-bold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
             Safwan Manas
           </h1>
 
-          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#a95847] text-lg md:text-2xl xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
+          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#a95847] text-lg md:text-2xl xl:text-4xl 2xl:text-6xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
             SPATIAL DESIGNER
           </p>
         </div>
         <img
           src={profile}
           alt=""
-          className="absolute bottom-0 left-0 md:static w-full lg:w-1/2 xl:px-20 mt-48 md:scale-125 "
+          className="absolute bottom-0 left-0 md:static w-full lg:w-1/2 xl:px-20 mt-48 md:transform md:translate-x-16 md:scale-125 "
         />
       </div>
 
