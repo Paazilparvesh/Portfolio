@@ -11,18 +11,18 @@ import img109 from "/src/assets/Project_Images/aero/9.jpg";
 import img110 from "/src/assets/Project_Images/aero/10.jpg";
 
 // Agarwal
-import img201 from "/src/assets/Project_Images/agarwal/10.jpg";
-import img202 from "/src/assets/Project_Images/agarwal/11.jpg";
-import img203 from "/src/assets/Project_Images/agarwal/12.jpg";
-import img204 from "/src/assets/Project_Images/agarwal/4.jpg";
-import img205 from "/src/assets/Project_Images/agarwal/5.jpg";
-import img206 from "/src/assets/Project_Images/agarwal/6.jpg";
-import img207 from "/src/assets/Project_Images/agarwal/7.jpg";
-import img208 from "/src/assets/Project_Images/agarwal/8.jpg";
-import img209 from "/src/assets/Project_Images/agarwal/9.jpg";
-import img210 from "/src/assets/Project_Images/agarwal/1.jpg";
-import img211 from "/src/assets/Project_Images/agarwal/2.jpg";
-import img212 from "/src/assets/Project_Images/agarwal/3.jpg";
+import img201 from "/src/assets/Project_Images/Agarwal/10.jpg";
+import img202 from "/src/assets/Project_Images/Agarwal/11.jpg";
+import img203 from "/src/assets/Project_Images/Agarwal/12.jpg";
+import img204 from "/src/assets/Project_Images/Agarwal/4.jpg";
+import img205 from "/src/assets/Project_Images/Agarwal/5.jpg";
+import img206 from "/src/assets/Project_Images/Agarwal/6.jpg";
+import img207 from "/src/assets/Project_Images/Agarwal/7.jpg";
+import img208 from "/src/assets/Project_Images/Agarwal/8.jpg";
+import img209 from "/src/assets/Project_Images/Agarwal/9.jpg";
+import img210 from "/src/assets/Project_Images/Agarwal/1.jpg";
+import img211 from "/src/assets/Project_Images/Agarwal/2.jpg";
+import img212 from "/src/assets/Project_Images/Agarwal/3.jpg";
 
 // Axel Arigato
 import img301 from "/src/assets/Project_Images/Axel Arigato/0.jpg";
