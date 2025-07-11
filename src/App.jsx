@@ -15,8 +15,8 @@ function App() {
     
     <BrowserRouter>
     <Pointer />
-    <ScrollToTop /> {/* Always keep this above <Routes /> */}
     <Header />
+    <ScrollToTop /> {/* Always keep this above <Routes /> */}
       <Routes>
         <Route path="/" element={<ProjectsPage />} />
         <Route path="/about" element={<About />} />
