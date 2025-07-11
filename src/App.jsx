@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "/src/Components/Header.jsx";
-import ScrollToTop from "/src/Components/ScrollToTop";
+import ScrollToTop from "/src/Components/ScrollToTop.jsx";
 import Home from "/src/Components/Home.jsx";
 import About from "/src/Pages/AboutPage.jsx";
 import Pointer from "/src/Components/Pointer";
