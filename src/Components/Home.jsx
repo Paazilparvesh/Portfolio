@@ -150,7 +150,6 @@ function DesktopLayout() {
 function MobileLayout() {
   return (
     <>
-      <Header />
       <section id="home" className="min-h-screen bg-black text-white">
         <Hero />
       </section>

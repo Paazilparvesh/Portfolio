@@ -54,7 +54,7 @@ export default function Contact() {
         >
           <Link to="/contact">
             <span className="text-[#fde3a7] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold uppercase tracking-wide font-abel">
-              Contact Us
+              Contact Me
             </span>
           </Link>
         </div>
