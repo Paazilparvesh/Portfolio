@@ -183,7 +183,7 @@ const Hero = () => {
             Hello, I’m
           </p>
 
-          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[100px] xl:text-[160px]  font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
+          <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[100px] xl:text-[160px] 2xl:text-[200px] font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
             Safwan Manas
           </h1>
 
