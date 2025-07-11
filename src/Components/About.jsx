@@ -23,7 +23,6 @@ const skills = [
 const AboutSection = () => {
   const sectionRef = useRef(null);
   const barsRef = useRef([]);
-  const lottieRef = useRef(null); // 🔥 Add Lottie reference
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,18 +43,6 @@ const AboutSection = () => {
           }
         );
       });
-
-      // 🔥 Lottie Animation Trigger on Scroll
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top bottom+=80", // Start when the section is 100px from the bottom
-        once: true, // play only once
-        onEnter: () => {
-          if (lottieRef.current) {
-            lottieRef.current.play();
-          }
-        },
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -67,21 +54,21 @@ const AboutSection = () => {
       className="w-full md:h-screen bg-[#a95847] flex flex-col md:flex-row items-start justify-between gap-5 pt-5  md:pt-4 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
       {/* 📸 Image */}
-      <div className="w-full md:w-1/2 flex justify-center items-center overflow-hidden">
+      <div className="w-full md:w-1/2 lg:mt-10 flex justify-center items-center overflow-hidden">
         <img
           src={profile}
           alt=""
-          className="size-full -mb-24 md:mb-0 xl:-mb-80 2xl:-mb-[550px] object-cover"
+          className="size-full -mb-24 md:mb-0 xl:-mb-80 2xl:-mb-[500px] object-cover"
         />
       </div>
 
       {/* 📄 Text */}
       <div className="w-full md:w-1/2">
-        <h2 className="text-4xl mt-5 md:mt-0 sm:text-5xl md:text-5xl font-extrabold text-[#fde3a7] mb-4  uppercase tracking-wide font-helvetica leading-tight">
+        <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10  sm:text-5xl md:text-5xl font-extrabold text-[#fde3a7] mb-4 2xl:mb-8 uppercase tracking-wide font-helvetica leading-tight">
           About Me
         </h2>
 
-        <div className=" text-white text-lg sm:text-md md:text-lg lg:text-xl 2xl:text-2xl leading-relaxed md:leading-7 mb-5 font-medium font-abel space-y-5 text-justify max-w-3xl">
+        <div className=" text-white text-lg sm:text-md md:text-lg lg:text-xl 2xl:text-3xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify max-w-3xl">
           <p>
             Hello, I'm Mohamed Safwan, a recent master's graduate in Retail
             Design at Elisava school of design and engineering, a spatial
@@ -97,8 +84,8 @@ const AboutSection = () => {
         <div className="space-y-8 mb-10 max-w-3xl">
           {skills.map(({ title, percent }, i) => (
             <div key={i}>
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-[#fde3a7] text-sm md:text-base lg:text-md font-semibold uppercase tracking-wide font-helvetica">
+              <div className="flex justify-between items-center mb-2 2xl:mb-4">
+                <h3 className="text-[#fde3a7] text-sm md:text-base lg:text-md 2xl:text-xl font-semibold uppercase tracking-wide font-helvetica">
                   {title}
                 </h3>
                 <p className="text-[#fde3a7] text-sm sm:text-base font-semibold">

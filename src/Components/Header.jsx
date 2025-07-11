@@ -28,15 +28,15 @@ const Header = () => {
               <Link to="/">Portfolio</Link>
             </li>
             <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
-              <a href={resume} download>
-                CV
-              </a>
-            </li>
-            <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
               <Link to="/about">About</Link>
             </li>
             <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
               <Link to="/contact">Contact</Link>
+            </li>
+            <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
+              <a href={resume} download>
+                CV
+              </a>
             </li>
           </ul>
         </nav>

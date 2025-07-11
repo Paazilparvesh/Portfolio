@@ -1,5 +1,4 @@
-import useIsDesktop from "/src/Hooks/isDesktop.jsx"; // adjust path
-// import Header from "./Header";
+import useIsDesktop from "/src/Hooks/isDesktop.jsx";
 import Hero from "/src/Components/Hero.jsx";
 import About from "/src/Components/About";
 import Experince from "/src/Components/Experince";
@@ -78,9 +77,6 @@ function DesktopLayout() {
 
   return (
     <div className="bg-[#FFB91A]">
-      {/* <div className="relative z-50">
-        <Header />
-      </div> */}
       <div id="home">
         <Hero />
       </div>
@@ -109,21 +105,10 @@ function DesktopLayout() {
 function MobileLayout() {
   return (
     <>
-      <section id="home" className="min-h-screen bg-black text-white">
-        <Hero />
-      </section>
-      <section id="about" className="min-h-screen">
-        <About />
-      </section>
-      <section id="education" className="">
-        <Experince />
-      </section>
-      <section id="projects" className="">
-        <Project />
-      </section>
-      <section id="contact" className="">
-        <Contact />
-      </section>
+      <Hero />
+      <About />
+      <Experince />
+      <Contact />
     </>
   );
 }
