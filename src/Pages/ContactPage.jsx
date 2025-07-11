@@ -44,16 +44,21 @@ const ContactPage = () => {
 
     emailjs
       .send(
-        "service_ur9w2wn", // 👈 from emailjs.com dashboard
-        "template_e7txh36", // 👈 from emailjs.com dashboard
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        "w5boYqdC71W0U2nt3" // 👈 from emailjs.com dashboard
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log("Email sent", result.text);
           setStatus("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+            date: new Date().toLocaleString(),
+          });
           setErrors({});
         },
         (error) => {

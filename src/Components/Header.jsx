@@ -33,6 +33,9 @@ const Header = () => {
               </a>
             </li>
             <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
@@ -78,6 +81,9 @@ const Header = () => {
             >
               CV
             </a>
+            <button className="hover:text-[#a95847] font-abel focus:outline-none">
+              <Link to="/about">About</Link>
+            </button>
             <button className="hover:text-[#a95847] font-abel focus:outline-none">
               <Link to="/contact">Contact</Link>
             </button>

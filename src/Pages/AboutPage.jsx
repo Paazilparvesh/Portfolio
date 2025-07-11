@@ -1,11 +1,9 @@
 import useIsDesktop from "/src/Hooks/isDesktop.jsx"; // adjust path
 // import Header from "./Header";
-import Hero from "./Hero";
-import About from "./About";
-import Experince from "./Experince";
-import Project from "./Projects";
-import Contact from "./Contact";
-// import Pagination from "./Pagination"; // optional
+import Hero from "/src/Components/Hero.jsx";
+import About from "/src/Components/About";
+import Experince from "/src/Components/Experince";
+import Contact from "/src/Components/Contact";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -16,7 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
 function DesktopLayout() {
   const containerRef = useRef(null);
   const panelsRef = useRef([]);
-  const horizontalRef = useRef(null);
 
   const panelData = [
     { id: "about", component: About },
@@ -79,25 +76,6 @@ function DesktopLayout() {
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
-  useEffect(() => {
-    const section = horizontalRef.current;
-    const panels = section.querySelectorAll(".horizontal-panel");
-
-    gsap.to(panels, {
-      xPercent: -100 * (panels.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${section.scrollWidth}`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-  }, []);
-
   return (
     <div className="bg-[#FFB91A]">
       {/* <div className="relative z-50">
@@ -123,26 +101,7 @@ function DesktopLayout() {
           </div>
         ))}
       </div>
-      <section
-        ref={horizontalRef}
-        className="relative h-screen w-full overflow-hidden bg-black"
-        id="horizontal"
-      >
-        <div className="flex w-[200vw] h-full">
-          <div
-            id="projects"
-            className="horizontal-panel w-screen h-full flex justify-center items-center"
-          >
-            <Project />
-          </div>
-          <div
-            id="contact"
-            className="horizontal-panel w-screen h-full flex justify-center items-center"
-          >
-            <Contact />
-          </div>
-        </div>
-      </section>
+      <Contact />
     </div>
   );
 }
