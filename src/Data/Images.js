@@ -1,0 +1,236 @@
+// AERO
+import img101 from "/src/assets/Project_Images/aero/1.jpg";
+import img102 from "/src/assets/Project_Images/aero/2.jpg";
+import img103 from "/src/assets/Project_Images/aero/3.jpg";
+import img104 from "/src/assets/Project_Images/aero/4.jpg";
+import img105 from "/src/assets/Project_Images/aero/5.jpg";
+import img106 from "/src/assets/Project_Images/aero/6.jpg";
+import img107 from "/src/assets/Project_Images/aero/7.jpg";
+import img108 from "/src/assets/Project_Images/aero/8.jpg";
+import img109 from "/src/assets/Project_Images/aero/9.jpg";
+import img110 from "/src/assets/Project_Images/aero/10.jpg";
+
+// Agarwal
+import img201 from "/src/assets/Project_Images/agarwal/10.jpg";
+import img202 from "/src/assets/Project_Images/agarwal/11.jpg";
+import img203 from "/src/assets/Project_Images/agarwal/12.jpg";
+import img204 from "/src/assets/Project_Images/agarwal/4.jpg";
+import img205 from "/src/assets/Project_Images/agarwal/5.jpg";
+import img206 from "/src/assets/Project_Images/agarwal/6.jpg";
+import img207 from "/src/assets/Project_Images/agarwal/7.jpg";
+import img208 from "/src/assets/Project_Images/agarwal/8.jpg";
+import img209 from "/src/assets/Project_Images/agarwal/9.jpg";
+import img210 from "/src/assets/Project_Images/agarwal/1.jpg";
+import img211 from "/src/assets/Project_Images/agarwal/2.jpg";
+import img212 from "/src/assets/Project_Images/agarwal/3.jpg";
+
+// Axel Arigato
+import img301 from "/src/assets/Project_Images/Axel Arigato/0.jpg";
+import img302 from "/src/assets/Project_Images/Axel Arigato/1.jpg";
+import img303 from "/src/assets/Project_Images/Axel Arigato/2.jpg";
+import img304 from "/src/assets/Project_Images/Axel Arigato/3.jpg";
+import img305 from "/src/assets/Project_Images/Axel Arigato/4.jpg";
+import img306 from "/src/assets/Project_Images/Axel Arigato/5.jpg";
+import img307 from "/src/assets/Project_Images/Axel Arigato/6.jpg";
+import img308 from "/src/assets/Project_Images/Axel Arigato/7.jpg";
+// import img309 from "/src/assets/Project_Images/Axel Arigato/8.gif"; // Gif
+import img310 from "/src/assets/Project_Images/Axel Arigato/9.jpg";
+import img311 from "/src/assets/Project_Images/Axel Arigato/10.jpg";
+import img312 from "/src/assets/Project_Images/Axel Arigato/11.jpg";
+import img313 from "/src/assets/Project_Images/Axel Arigato/12.jpg";
+import img314 from "/src/assets/Project_Images/Axel Arigato/13.jpg";
+import img316 from "/src/assets/Project_Images/Axel Arigato/15.jpg";
+import img317 from "/src/assets/Project_Images/Axel Arigato/16.jpg";
+import img318 from "/src/assets/Project_Images/Axel Arigato/17.jpg";
+import img319 from "/src/assets/Project_Images/Axel Arigato/18.jpg";
+import img320 from "/src/assets/Project_Images/Axel Arigato/20.jpg";
+
+// Beatriz Furest
+import img401 from "/src/assets/Project_Images/Beatriz Furest/1.jpg";
+import img402 from "/src/assets/Project_Images/Beatriz Furest/2.jpg";
+import img403 from "/src/assets/Project_Images/Beatriz Furest/3.jpg";
+import img404 from "/src/assets/Project_Images/Beatriz Furest/4.jpg";
+import img405 from "/src/assets/Project_Images/Beatriz Furest/5.jpg";
+import img406 from "/src/assets/Project_Images/Beatriz Furest/6.jpg";
+// import img407 from "/src/assets/Project_Images/Beatriz Furest/7.gif"; // Gif
+import img408 from "/src/assets/Project_Images/Beatriz Furest/8.jpg";
+import img409 from "/src/assets/Project_Images/Beatriz Furest/9.jpg";
+import img410 from "/src/assets/Project_Images/Beatriz Furest/10.jpg";
+import img411 from "/src/assets/Project_Images/Beatriz Furest/11.jpg";
+import img412 from "/src/assets/Project_Images/Beatriz Furest/12.jpg";
+// import img413 from "/src/assets/Project_Images/Beatriz Furest/13.gif"; // Gif
+
+// Ecoalf
+import img501 from "/src/assets/Project_Images/Ecoalf/0.jpg";
+import img502 from "/src/assets/Project_Images/Ecoalf/1.jpg";
+import img503 from "/src/assets/Project_Images/Ecoalf/2.jpg";
+import img504 from "/src/assets/Project_Images/Ecoalf/3.jpg";
+import img505 from "/src/assets/Project_Images/Ecoalf/4.jpg";
+import img506 from "/src/assets/Project_Images/Ecoalf/5.jpg";
+import img507 from "/src/assets/Project_Images/Ecoalf/6.jpg";
+import img508 from "/src/assets/Project_Images/Ecoalf/7.jpg";
+import img509 from "/src/assets/Project_Images/Ecoalf/8.jpg";
+import img510 from "/src/assets/Project_Images/Ecoalf/9.jpg";
+import img511 from "/src/assets/Project_Images/Ecoalf/10.jpg";
+import img512 from "/src/assets/Project_Images/Ecoalf/11.jpg";
+import img513 from "/src/assets/Project_Images/Ecoalf/12.jpg";
+import img514 from "/src/assets/Project_Images/Ecoalf/13.jpg";
+import img515 from "/src/assets/Project_Images/Ecoalf/14.jpg";
+
+// House of 3 walls
+// import img601 from "/src/assets/Project_Images/House of 3 walls/0.gif"; // Gif
+import img602 from "/src/assets/Project_Images/House of 3 walls/2.jpg";
+import img603 from "/src/assets/Project_Images/House of 3 walls/3.jpg";
+import img604 from "/src/assets/Project_Images/House of 3 walls/4.jpg";
+import img605 from "/src/assets/Project_Images/House of 3 walls/5.jpg";
+
+// IkeaZ
+import img701 from "/src/assets/Project_Images/IkeaZ/0.jpg";
+import img703 from "/src/assets/Project_Images/IkeaZ/2.jpg";
+import img704 from "/src/assets/Project_Images/IkeaZ/3.jpg";
+import img705 from "/src/assets/Project_Images/IkeaZ/4.jpg";
+import img706 from "/src/assets/Project_Images/IkeaZ/5.jpg";
+import img707 from "/src/assets/Project_Images/IkeaZ/6.jpg";
+import img708 from "/src/assets/Project_Images/IkeaZ/7.jpg";
+import img709 from "/src/assets/Project_Images/IkeaZ/8.jpg";
+import img710 from "/src/assets/Project_Images/IkeaZ/9.jpg";
+import img711 from "/src/assets/Project_Images/IkeaZ/10.jpg";
+import img712 from "/src/assets/Project_Images/IkeaZ/11.jpg";
+import img713 from "/src/assets/Project_Images/IkeaZ/12.jpg";
+import img714 from "/src/assets/Project_Images/IkeaZ/13.jpg";
+import img715 from "/src/assets/Project_Images/IkeaZ/14.jpg";
+import img716 from "/src/assets/Project_Images/IkeaZ/15.jpg";
+import img717 from "/src/assets/Project_Images/IkeaZ/16.jpg";
+
+// Spotify
+// import img801 from "/src/assets/Project_Images/Spotify/0.gif"; // Gif
+import img802 from "/src/assets/Project_Images/Spotify/1.jpg";
+import img803 from "/src/assets/Project_Images/Spotify/2.jpg";
+import img804 from "/src/assets/Project_Images/Spotify/3.jpg";
+import img805 from "/src/assets/Project_Images/Spotify/4.jpg";
+import img806 from "/src/assets/Project_Images/Spotify/5.jpg";
+import img807 from "/src/assets/Project_Images/Spotify/6.jpg";
+import img808 from "/src/assets/Project_Images/Spotify/7.jpg";
+import img809 from "/src/assets/Project_Images/Spotify/8.jpg";
+import img810 from "/src/assets/Project_Images/Spotify/9.jpg";
+// import img811 from "/src/assets/Project_Images/Spotify/10.gif"; // Gif
+import img812 from "/src/assets/Project_Images/Spotify/11.jpg";
+
+// Villamar
+import img901 from "/src/assets/Project_Images/Villamar/0.jpg";
+import img902 from "/src/assets/Project_Images/Villamar/1.jpg";
+import img903 from "/src/assets/Project_Images/Villamar/2.jpg";
+import img904 from "/src/assets/Project_Images/Villamar/3.jpg";
+import img905 from "/src/assets/Project_Images/Villamar/4.jpg";
+
+export const projectImages = {
+  1: [
+    img101,
+    img102,
+    img103,
+    img104,
+    img105,
+    img106,
+    img107,
+    img108,
+    img109,
+    img110,
+  ],
+  2: [
+    img201,
+    img202,
+    img203,
+    img204,
+    img205,
+    img206,
+    img207,
+    img208,
+    img209,
+    img210,
+    img211,
+    img212,
+  ],
+  3: [
+    img301,
+    img302,
+    img303,
+    img304,
+    img305,
+    img306,
+    img307,
+    img308,
+    img310,
+    img311,
+    img312,
+    img313,
+    img314,
+    // img315,
+    img316,
+    img317,
+    img318,
+    img319,
+    img320,
+  ],
+  4: [
+    img401,
+    img402,
+    img403,
+    img404,
+    img405,
+    img406,
+    img408,
+    img409,
+    img410,
+    img411,
+    img412,
+  ],
+  5: [
+    img501,
+    img502,
+    img503,
+    img504,
+    img505,
+    img506,
+    img507,
+    img508,
+    img509,
+    img510,
+    img511,
+    img512,
+    img513,
+    img514,
+    img515,
+  ],
+  6: [img602, img603, img604, img605],
+  7: [
+    img701,
+    img703,
+    img704,
+    img705,
+    img706,
+    img707,
+    img708,
+    img709,
+    img710,
+    img711,
+    img712,
+    img713,
+    img714,
+    img715,
+    img716,
+    img717,
+  ],
+  8: [
+    img802,
+    img803,
+    img804,
+    img805,
+    img806,
+    img807,
+    img808,
+    img809,
+    img810,
+    img812,
+  ],
+  9: [img901, img902, img903, img904, img905],
+};

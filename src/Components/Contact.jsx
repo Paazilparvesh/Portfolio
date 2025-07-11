@@ -61,7 +61,7 @@ export default function Contact() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="flex-1 flex flex-col items-start gap-8 md:items-end -ml-26">
+      <div className="flex-1 flex flex-col items-start gap-8 md:items-end ">
         {/* Email */}
         <a
           href="mailto:safwanmanas@gmail.com"

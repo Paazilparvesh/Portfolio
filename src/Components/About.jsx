@@ -68,16 +68,21 @@ const AboutSection = () => {
           About Me
         </h2>
 
-        <div className=" text-white text-lg sm:text-md md:text-lg lg:text-xl 2xl:text-3xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify max-w-3xl">
+        <div className=" text-white text-lg sm:text-md md:text-lg lg:text-lg 2xl:text-2xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify max-w-3xl">
           <p>
-            Hello, I'm Mohamed Safwan, a recent master's graduate in Retail
+            Hello, I'm Mohamed Safwan, a recent masters graduate in Retail
             Design at Elisava school of design and engineering, a spatial
-            designer and sometimes an amateur shutterbug...
+            designer and sometimes an amateur shutterbug. My passion lies in
+            creating designs that resonate with people and enhance convenience,
+            reflecting my deep interest in human and societal needs. I am
+            particularly drawn to branding, marketing, and problem-solving,
+            aspiring to develop ideas and solutions that positively impact lives
+            and brands.
           </p>
-          <p>
-            Skilled in visual merchandising, space planning, and a piqued
-            interest in materials for sustainable design...
-          </p>
+          {/* <p>
+          When I’m not designing spaces, I find creative flow in graphics, branding, and music. These disciplines feed into my architectural thinking—each with its rhythm, structure, and emotion.
+          My travels have shaped my visual sensibility, curating a narrative that continues on platforms like Instagram. And my daily ritual—coffee—has become more than just caffeine. It's a quiet catalyst for conversation, often sparking unexpected collaborations, design dialogues, or simply inviting a moment of stillness in an otherwise kinetic world. Please enjoy my portfolio and discover the fun and functionality woven into my work.
+          </p> */}
         </div>
 
         {/* 🧠 Skills */}

@@ -121,17 +121,17 @@ import projectList from "../Data/ProjectList";
 export default function ProjectsScatteredGrid() {
   return (
     <section className="w-full min-h-screen bg-[#FFB91A] pt-36 pb-20">
-      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-12">
+      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 mt-40">
         {projectList.map((project, index) => {
           // Apply vertical offset to create a staggered pattern
           const topOffset =
             index % 4 === 1
-              ? "mt-32"
+              ? "mt-56"
               : index % 4 === 2
-              ? "mt-68"
+              ? "-mt-40"
               : index % 4 === 3
-              ? "mt-112"
-              : "mt-0";
+              ? "mt-56"
+              : "-mt-40";
 
           return (
             <Link
