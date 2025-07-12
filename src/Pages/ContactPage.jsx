@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
@@ -77,7 +76,7 @@ const ContactPage = () => {
   return (
     <section className="min-h-screen w-full bg-black text-white px-6 md:px-20 py-20 font-['Helvetica']">
       {/* Header */}
-      <h1 className="text-4xl md:text-6xl lg:text-8xl 2xl:text-[250px] text-[#FFB91A] mt-20 font-bold font-abel mb-16 text-center">
+      <h1 className="text-5xl md:text-7xl lg:text-9xl 2xl:text-[250px] text-[#FFB91A] mt-20 font-bold font-abel mb-16 text-center">
         Contact Me
       </h1>
 
@@ -142,10 +141,10 @@ const ContactPage = () => {
       </div>
 
       {/* Name Branding */}
-      <div className="text-5xl md:text-7xl lg:text-[6rem] font-bold font-abel mt-20 leading-none 2xl:text-[250px] mb-16 text-center">
+      <div className="text-5xl md:text-7xl lg:text-9xl font-bold font-abel mt-20 leading-none 2xl:text-[250px] mb-16 text-center">
         Safwan Manas
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <div className="space-y-6 text-sm md:text-base flex flex-col md:flex-row justify-center">
           <a
             href="mailto:safwanmanas@gmail.com"
@@ -155,7 +154,7 @@ const ContactPage = () => {
             safwanmanas@gmail.com
           </a>
           {/* Phone Numbers */}
-          <div className="flex flex-col  md:flex-row text-lg md:text-xl space-x-5 px-5">
+          <div className="flex flex-col md:flex-row text-lg md:text-xl space-x-5 md:px-5">
             <a
               href="tel:+919840952854"
               className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
@@ -171,7 +170,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="flex gap-6 text-2xl">
+        <div className="flex gap-6 text-2xl my-5 md:my-0">
           <a
             href="#"
             className="hover:text-blue-500 hover:scale-150 transition-all duration-300"
@@ -212,7 +211,6 @@ const ContactPage = () => {
             thirdvizion.com
           </a>
         </div>
-        <p className="underline">Privacy Policy</p>
       </div>
     </section>
   );

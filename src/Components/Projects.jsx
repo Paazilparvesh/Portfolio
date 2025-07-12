@@ -117,7 +117,7 @@ import projectList from "/src/Data/ProjectList";
 
 export default function ProjectsScatteredGrid() {
   return (
-    <section className="w-full min-h-screen bg-[#FFB91A] pt-36 pb-20">
+    <section className="w-full bg-[#FFB91A] pt-36 pb-20">
       <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-10 md:mt-40">
         {projectList.map((project, index) => {
           // Apply vertical offset to create a staggered pattern
@@ -156,6 +156,9 @@ export default function ProjectsScatteredGrid() {
           );
         })}
       </div>
+      <p className="transform translate-y-16 px-2 font-abel sm:text-lg">
+        Copyright @ All rights reserved
+      </p>
     </section>
   );
 }
