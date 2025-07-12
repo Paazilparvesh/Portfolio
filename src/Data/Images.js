@@ -43,7 +43,7 @@ import img316 from "/src/assets/Project_Images/Axel Arigato/15.jpg";
 import img317 from "/src/assets/Project_Images/Axel Arigato/16.jpg";
 import img318 from "/src/assets/Project_Images/Axel Arigato/17.jpg";
 import img319 from "/src/assets/Project_Images/Axel Arigato/18.jpg";
-import img320 from "/src/assets/Project_Images/Axel Arigato/20.jpg";
+// import img320 from "/src/assets/Project_Images/Axel Arigato/20.jpg";
 
 // Beatriz Furest
 import img401 from "/src/assets/Project_Images/Beatriz Furest/1.jpg";
@@ -169,7 +169,7 @@ export const projectImages = {
     img317,
     img318,
     img319,
-    img320,
+    // img320,
   ],
   4: [
     img401,

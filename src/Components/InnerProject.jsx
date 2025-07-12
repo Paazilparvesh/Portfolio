@@ -187,13 +187,13 @@ function InnerProject() {
     .map(([_, value]) => value);
 
   return (
-    <div className="bg-[#fef7e5] text-[#1a1a1a] min-h-screen px-6 py-10 md:px-16 lg:px-32 font-sans overflow-x-hidden space-y-16">
+    <div className="bg-[#FFB91A] text-[#1a1a1a] min-h-screen px-6 py-10 md:px-16 lg:px-32 pt-40 overflow-x-hidden space-y-16">
       {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-6xl font-bold text-yellow-600 text-center mb-2"
+        className="text-4xl md:text-6xl font-bold font-abel tracking-wider text-white text-center mb-2"
       >
         {project.title}
       </motion.h1>
@@ -203,7 +203,7 @@ function InnerProject() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="text-md md:text-xl text-yellow-800 text-center"
+        className="text-md md:text-xl text-yellow-800 font-abel tracking-wider text-center"
       >
         {project.location ? `${project.location} | ` : ""}
         {project.year && <>{project.year}</>}
@@ -211,39 +211,80 @@ function InnerProject() {
 
       {/* Alternating Image + Description Blocks */}
       {project.images?.map((img, idx) => {
-        const content = contentBlocks[idx];
-        const isEven = idx % 2 === 0;
+  const content = contentBlocks[idx];
+  const isEven = idx % 2 === 0;
 
-        return (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * idx, duration: 0.6 }}
-            className={`flex flex-col ${
-              isEven ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center gap-10`}
-          >
-            <img
-              src={img}
-              alt={`project-${project.id}-img-${idx}`}
-              className="w-full md:w-1/2 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
-            />
-            {content && (
-              <div className="w-full md:w-1/2 text-lg space-y-3">
-                <h2 className="text-2xl font-semibold text-yellow-700">
-                  {content.topic}
-                </h2>
-                <p className="leading-relaxed whitespace-pre-line">
-                  {content.content}
-                </p>
-              </div>
-            )}
-          </motion.div>
-        );
-      })}
+  // If there's content, show image + text
+  if (content) {
+    return (
+      <motion.div
+        key={idx}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 * idx, duration: 0.6 }}
+        className={`flex flex-col ${
+          isEven ? "md:flex-row" : "md:flex-row-reverse"
+        } items-center gap-10`}
+      >
+        <img
+          src={img}
+          alt={`project-${project.id}-img-${idx}`}
+          className="w-full md:w-1/2 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+        />
+        <div className="w-full md:w-1/2 text-lg space-y-3">
+          <h2 className="text-2xl 2xl:text-4xl font-abel tracking-wider font-semibold text-[#a95847] mb-6">
+            {content.topic}
+          </h2>
+          <p className="leading-relaxed 2xl:text-xl font-abel tracking-wide whitespace-pre-line">
+            {content.content}
+          </p>
+        </div>
+      </motion.div>
+    );
+  }
 
-      {/* ⛔ Highlights, Impact, and Overview Removed */}
+  // If there's NO content, show this image + next image side-by-side
+  const nextImage = project.images[idx + 1];
+  if (nextImage) {
+    return (
+      <motion.div
+        key={idx}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 * idx, duration: 0.6 }}
+        className="flex flex-col md:flex-row gap-6"
+      >
+        <img
+          src={img}
+          alt={`project-${project.id}-img-${idx}`}
+          className="w-full md:w-1/2 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src={nextImage}
+          alt={`project-${project.id}-img-${idx + 1}`}
+          className="w-full md:w-1/2 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+        />
+      </motion.div>
+    );
+  }
+
+  // If it's the last image and no content or pair, show single image full width
+  return (
+    <motion.div
+      key={idx}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 * idx, duration: 0.6 }}
+    >
+      <img
+        src={img}
+        alt={`project-${project.id}-img-${idx}`}
+        className="w-full rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+      />
+    </motion.div>
+  );
+})}
+
     </div>
   );
 }
