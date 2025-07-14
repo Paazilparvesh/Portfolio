@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProjectList from "../Data/ProjectList";
 import gsap from "gsap";
@@ -10,112 +10,68 @@ gsap.registerPlugin(ScrollTrigger);
 function InnerProject() {
   const { id } = useParams();
   const project = ProjectList.find((proj) => proj.id === Number(id));
+  const [loadTwice, setLoadTwice] = useState(false);
 
   const bannerRef = useRef(null);
   const titleRef = useRef(null);
   const scrollSectionRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
-  // useEffect(() => {
-  //   // Scroll to top when navigating to this page
-  //   window.scrollTo(0, 0);
-
-  //   if (!bannerRef.current || !titleRef.current) return;
-
-  //   const image = bannerRef.current.querySelector("img");
-
-  //   // Parallax effect for banner image
-  //   gsap.fromTo(
-  //     image,
-  //     { scale: 1.2, y: 0 },
-  //     {
-  //       scale: 1,
-  //       y: -50,
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: bannerRef.current,
-  //         start: "top top",
-  //         end: "bottom top",
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-
-  //   // Horizontal scroll effect
-  //   const scrollContainer = scrollContainerRef.current;
-  //   const scrollSection = scrollSectionRef.current;
-
-  //   gsap.to(scrollContainer, {
-  //     x: () => -(scrollContainer.scrollWidth - window.innerWidth),
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: scrollSection,
-  //       start: "top top",
-  //       end: () => `+=${scrollContainer.scrollWidth}`,
-  //       pin: true,
-  //       scrub: true,
-  //       anticipatePin: 1,
-  //       invalidateOnRefresh: true,
-  //     },
-  //   });
-
-  //   return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  // }, []);
-
   useEffect(() => {
+    // Force a second render after initial mount
+    if (!loadTwice) {
+      const timer = setTimeout(() => {
+        setLoadTwice(true);
+      }, 100); // short delay to let images/fonts settle
+      return () => clearTimeout(timer);
+    }
+  
+    // 👇 All your GSAP + ScrollTrigger code goes here
     window.scrollTo(0, 0);
-
+    ScrollTrigger.killAll();
+  
     if (!bannerRef.current || !titleRef.current) return;
-
+  
     const image = bannerRef.current.querySelector("img");
-
-    // ✅ Wait for layout + images/fonts before triggering ScrollTrigger
-    const timeout = setTimeout(() => {
-      ScrollTrigger.refresh(); // Always refresh after DOM settles
-
-      // Parallax effect
-      gsap.fromTo(
-        image,
-        { scale: 1.2, y: 0 },
-        {
-          scale: 1,
-          y: -50,
-          ease: "none",
-          scrollTrigger: {
-            trigger: bannerRef.current,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        }
-      );
-
-      // Horizontal scroll
-      const scrollContainer = scrollContainerRef.current;
-      const scrollSection = scrollSectionRef.current;
-
-      gsap.to(scrollContainer, {
-        x: () => -(scrollContainer.scrollWidth - window.innerWidth),
+  
+    gsap.fromTo(
+      image,
+      { scale: 1.2, y: 0 },
+      {
+        scale: 1,
+        y: -50,
         ease: "none",
         scrollTrigger: {
-          trigger: scrollSection,
+          trigger: bannerRef.current,
           start: "top top",
-          end: () => `+=${scrollContainer.scrollWidth}`,
-          pin: true,
+          end: "bottom top",
           scrub: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
         },
-      });
-
-      ScrollTrigger.refresh(); // Ensure final state is correct
-    }, 100); // wait for image/font/layout rendering
-
-    return () => {
-      clearTimeout(timeout);
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+      }
+    );
+  
+    const scrollContainer = scrollContainerRef.current;
+    const scrollSection = scrollSectionRef.current;
+  
+    gsap.to(scrollContainer, {
+      x: () => -(scrollContainer.scrollWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: scrollSection,
+        start: "top top",
+        end: () => `+=${scrollContainer.scrollWidth}`,
+        pin: true,
+        scrub: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      },
+    });
+  
+    ScrollTrigger.refresh();
+  
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  }, [loadTwice]);
+  
 
   if (!project) {
     return (
@@ -214,7 +170,6 @@ function InnerProject() {
       <section
         ref={scrollSectionRef}
         className="w-screen h-screen relative overflow-hidden"
-        style={{ width: "max-content", minWidth: "150vw" }} // 👈 Added
       >
         <div className="fixed top-0 left-20 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-40 overflow-hidden">
