@@ -56,7 +56,7 @@ function InnerProject() {
         trigger: scrollSection,
         start: "top top",
         end: () => `+=${scrollContainer.scrollWidth}`,
-        // pin: true,
+        pin: true,
         scrub: true,
         // anticipatePin: 1,
         // invalidateOnRefresh: true,
