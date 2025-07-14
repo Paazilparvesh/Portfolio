@@ -16,50 +16,105 @@ function InnerProject() {
   const scrollSectionRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
+  // useEffect(() => {
+  //   // Scroll to top when navigating to this page
+  //   window.scrollTo(0, 0);
+
+  //   if (!bannerRef.current || !titleRef.current) return;
+
+  //   const image = bannerRef.current.querySelector("img");
+
+  //   // Parallax effect for banner image
+  //   gsap.fromTo(
+  //     image,
+  //     { scale: 1.2, y: 0 },
+  //     {
+  //       scale: 1,
+  //       y: -50,
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: bannerRef.current,
+  //         start: "top top",
+  //         end: "bottom top",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+
+  //   // Horizontal scroll effect
+  //   const scrollContainer = scrollContainerRef.current;
+  //   const scrollSection = scrollSectionRef.current;
+
+  //   gsap.to(scrollContainer, {
+  //     x: () => -(scrollContainer.scrollWidth - window.innerWidth),
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: scrollSection,
+  //       start: "top top",
+  //       end: () => `+=${scrollContainer.scrollWidth}`,
+  //       pin: true,
+  //       scrub: true,
+  //       anticipatePin: 1,
+  //       invalidateOnRefresh: true,
+  //     },
+  //   });
+
+  //   return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  // }, []);
+
   useEffect(() => {
-    // Scroll to top when navigating to this page
     window.scrollTo(0, 0);
 
     if (!bannerRef.current || !titleRef.current) return;
 
     const image = bannerRef.current.querySelector("img");
 
-    // Parallax effect for banner image
-    gsap.fromTo(
-      image,
-      { scale: 1.2, y: 0 },
-      {
-        scale: 1,
-        y: -50,
+    // ✅ Wait for layout + images/fonts before triggering ScrollTrigger
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh(); // Always refresh after DOM settles
+
+      // Parallax effect
+      gsap.fromTo(
+        image,
+        { scale: 1.2, y: 0 },
+        {
+          scale: 1,
+          y: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: bannerRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+
+      // Horizontal scroll
+      const scrollContainer = scrollContainerRef.current;
+      const scrollSection = scrollSectionRef.current;
+
+      gsap.to(scrollContainer, {
+        x: () => -(scrollContainer.scrollWidth - window.innerWidth),
         ease: "none",
         scrollTrigger: {
-          trigger: bannerRef.current,
+          trigger: scrollSection,
           start: "top top",
-          end: "bottom top",
+          end: () => `+=${scrollContainer.scrollWidth}`,
+          pin: true,
           scrub: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
-      }
-    );
+      });
 
-    // Horizontal scroll effect
-    const scrollContainer = scrollContainerRef.current;
-    const scrollSection = scrollSectionRef.current;
+      ScrollTrigger.refresh(); // Ensure final state is correct
+    }, 100); // wait for image/font/layout rendering
 
-    gsap.to(scrollContainer, {
-      x: () => -(scrollContainer.scrollWidth - window.innerWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: scrollSection,
-        start: "top top",
-        end: () => `+=${scrollContainer.scrollWidth}`,
-        pin: true,
-        scrub: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-    });
-
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => {
+      clearTimeout(timeout);
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   if (!project) {
@@ -159,6 +214,7 @@ function InnerProject() {
       <section
         ref={scrollSectionRef}
         className="w-screen h-screen relative overflow-hidden"
+        style={{ width: "max-content", minWidth: "150vw" }} // 👈 Added
       >
         <div className="fixed top-0 left-20 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-40 overflow-hidden">
