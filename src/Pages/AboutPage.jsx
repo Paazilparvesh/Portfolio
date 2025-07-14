@@ -82,16 +82,17 @@ function DesktopLayout() {
       </div>
       <div
         ref={containerRef}
-        className="perspective-container bg-[#FFB91A] w-full h-screen relative overflow-hidden"
+        className="perspective-container bg-[#FFB91A] w-full h-[250vh] relative overflow-hidden"
       >
         {panelData.map(({ id, component: Component }, i) => (
           <div
             key={id}
             id={id}
-            className="panel w-full h-screen absolute top-0 left-0 flex items-center justify-center pointer-events-auto"
+            className="panel w-full h-screen absolute top-0 left-0 flex items-center justify-center pointer-events-auto opacity-0"
             ref={(el) => (panelsRef.current[i] = el)}
+            style={{ zIndex: panelData.length - i }}
           >
-            <div className="w-full h-full flex justify-center items-center pointer-events-auto">
+            <div className="w-full h-full my-40 flex justify-center items-start pointer-events-auto">
               <Component />
             </div>
           </div>

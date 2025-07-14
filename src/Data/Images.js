@@ -11,11 +11,11 @@ import img109 from "/src/assets/Project_Images/aero/9.jpg";
 import img110 from "/src/assets/Project_Images/aero/10.jpg";
 
 // Agarwal
-import img201 from "/src/assets/Project_Images/Agarwal/10.jpg";
+import img201 from "/src/assets/Project_Images/Agarwal/5.jpg";
 import img202 from "/src/assets/Project_Images/Agarwal/11.jpg";
 import img203 from "/src/assets/Project_Images/Agarwal/12.jpg";
 import img204 from "/src/assets/Project_Images/Agarwal/4.jpg";
-import img205 from "/src/assets/Project_Images/Agarwal/5.jpg";
+import img205 from "/src/assets/Project_Images/Agarwal/10.jpg";
 import img206 from "/src/assets/Project_Images/Agarwal/6.jpg";
 import img207 from "/src/assets/Project_Images/Agarwal/7.jpg";
 import img208 from "/src/assets/Project_Images/Agarwal/8.jpg";
@@ -79,10 +79,10 @@ import img515 from "/src/assets/Project_Images/Ecoalf/14.jpg";
 
 // House of 3 walls
 // import img601 from "/src/assets/Project_Images/House of 3 walls/0.gif"; // Gif
-import img602 from "/src/assets/Project_Images/House of 3 walls/2.jpg";
+import img602 from "/src/assets/Project_Images/House of 3 walls/5.jpg";
 import img603 from "/src/assets/Project_Images/House of 3 walls/3.jpg";
 import img604 from "/src/assets/Project_Images/House of 3 walls/4.jpg";
-import img605 from "/src/assets/Project_Images/House of 3 walls/5.jpg";
+import img605 from "/src/assets/Project_Images/House of 3 walls/2.jpg";
 
 // IkeaZ
 import img701 from "/src/assets/Project_Images/IkeaZ/0.jpg";

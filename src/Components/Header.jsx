@@ -1,25 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import resume from "/src/assets/cv24.pdf";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // 👈 current path
+
+  const isAboutHero = location.pathname === "/about"; // you can refine this if needed
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-20 py-6 transition-all duration-300
       }`}
     >
-      <div className="flex items-center justify-between relative">
-        {/* Logo */}
-        <div className="z-50 flex flex-col justify-center items-end leading-tight hover:scale-105 transition-all duration-300">
-          <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-bold uppercase cursor-pointer tracking-wider font-helvetica">
-            <Link to="/">SAFWAN MANAS</Link>
+      <div
+        className={`flex items-center ${
+          isAboutHero ? "justify-center" : "justify-between"
+        } relative`}
+      >
+        {/* Logo (conditionally hidden) */}
+        {!isAboutHero && (
+          <div className="z-50 flex flex-col justify-center items-end leading-tight hover:scale-105 transition-all duration-300">
+            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-bold uppercase cursor-pointer tracking-wider helvetica-neue">
+              <Link to="/">SAFWAN MANAS</Link>
+            </div>
+            <p className="text-[#a95847] font-light text-sm sm:text-sm md:text-base lg:text-lg -mt-1 tracking-widest text-right font-abel">
+              <Link to="/">Architect | Retail Designer</Link>
+            </p>
           </div>
-          <p className="text-[#a95847] font-light text-sm sm:text-sm md:text-base lg:text-lg -mt-1 tracking-widest text-right font-abel">
-            <Link to="/">SPATIAL DESIGNER</Link>
-          </p>
-        </div>
+        )}
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-12 lg:gap-16">
@@ -71,37 +80,36 @@ const Header = () => {
           }`}
         >
           <div className="flex flex-col items-center justify-center h-full space-y-10 text-[#fde3a7] text-xl uppercase tracking-widest">
-  <Link
-    to="/"
-    onClick={() => setMenuOpen(false)}
-    className="hover:text-[#a95847] font-abel focus:outline-none"
-  >
-    Portfolio
-  </Link>
-  <Link
-    to="/about"
-    onClick={() => setMenuOpen(false)}
-    className="hover:text-[#a95847] font-abel focus:outline-none"
-  >
-    About
-  </Link>
-  <Link
-    to="/contact"
-    onClick={() => setMenuOpen(false)}
-    className="hover:text-[#a95847] font-abel focus:outline-none"
-  >
-    Contact
-  </Link>
-  <a
-    href={resume}
-    download
-    className="hover:text-[#a95847] font-abel focus:outline-none"
-    onClick={() => setMenuOpen(false)}
-  >
-    CV
-  </a>
-</div>
-
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-[#a95847] font-abel focus:outline-none"
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-[#a95847] font-abel focus:outline-none"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-[#a95847] font-abel focus:outline-none"
+            >
+              Contact
+            </Link>
+            <a
+              href={resume}
+              download
+              className="hover:text-[#a95847] font-abel focus:outline-none"
+              onClick={() => setMenuOpen(false)}
+            >
+              CV
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -109,15 +117,6 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
@@ -238,7 +237,7 @@ export default Header;
 //                 &times;
 //               </button>
 //               <h2 className="text-xl font-semibold text-[#1a1a1a] font-abel tracking-wide">
-//                 Feel Free to Download my resume 
+//                 Feel Free to Download my resume
 //               </h2>
 //               <a
 //                 href={resume}

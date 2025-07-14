@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
@@ -48,13 +47,13 @@ export default function Contact() {
       md:right-100 
       xl:bottom-70 
       xl:right-155
-      2xl:bottom-80
-      2xl:right-210
+      2xl:bottom-60
+      2xl:right-160
     "
         >
           <Link to="/contact">
             <span className="text-[#fde3a7] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold uppercase tracking-wide font-abel">
-              Contact Me
+              Open For Work
             </span>
           </Link>
         </div>
@@ -73,29 +72,22 @@ export default function Contact() {
 
         {/* Phone Numbers */}
         <div className="flex flex-col text-lg md:text-xl space-y-2 ">
+        <a
+            href="tel:+97336070242"
+            className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
+          >
+            +973 360 702 42
+          </a>
           <a
             href="tel:+919840952854"
             className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
           >
             +91 984 095 28 54
           </a>
-          <a
-            href="tel:+97336070242"
-            className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
-          >
-            +973 360 702 42
-          </a>
         </div>
 
         {/* Social Icons */}
         <div className="flex gap-6 text-2xl mt-6">
-          <a
-            href="#"
-            className="hover:text-blue-500 hover:scale-150 transition-all duration-300"
-            aria-label="Facebook"
-          >
-            <FaFacebook />
-          </a>
           <a
             href="https://www.instagram.com/safwanmanas/"
             target="_blank"

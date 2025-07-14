@@ -14,7 +14,7 @@ function App() {
   return (
     
     <BrowserRouter>
-    <Pointer />
+    {/* <Pointer /> */}
     <Header />
     <ScrollToTop /> {/* Always keep this above <Routes /> */}
       <Routes>
