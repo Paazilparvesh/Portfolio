@@ -153,6 +153,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const educationData = [
   {
+    year: "2009-2014",
+    role: "Bachelor of Architecture",
+    company: "Anna University, India",
+    desc: "Studied core architectural concepts, design thinking and sustainable design principles.",
+  },
+  {
     year: "2009-2010",
     role: "Design Intern",
     company: "Al Hamad Constructions Bahrain",
@@ -163,12 +169,6 @@ const educationData = [
     role: "Design Architect",
     company: "Architecturered India",
     desc: "Coordinated & facilitated project execution of an institute & campus planning right from concept proposal, model studies, and GFC drawings with MEP subcontractors & structural consultants.",
-  },
-  {
-    year: "2009-2014",
-    role: "Bachelor of Architecture",
-    company: "Anna University, India",
-    desc: "Studied core architectural concepts, design thinking and sustainable design principles.",
   },
   {
     year: "2015-2020",

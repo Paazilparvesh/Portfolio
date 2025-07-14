@@ -18,7 +18,7 @@ function InnerProject() {
 
   useEffect(() => {
     // Scroll to top when navigating to this page
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
     if (!bannerRef.current || !titleRef.current) return;
 
@@ -60,7 +60,6 @@ function InnerProject() {
     });
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-    
   }, []);
 
   if (!project) {
@@ -81,7 +80,7 @@ function InnerProject() {
         <img
           src={project.banner || project.images?.[0]}
           alt="project-banner"
-          className="w-full h-full object-cover will-change-transform"
+          className="w-full h-full object-fit will-change-transform"
         />
 
         {/* Scrolling Title */}
@@ -118,6 +117,44 @@ function InnerProject() {
           }
         `}</style>
       </div>
+
+      {/* higlights & impact content here */}
+      {/* 🔹 Highlights & Impact Section */}
+      <div className="mt-20 max-w-6xl mx-auto text-left space-y-12">
+        {/* Description */}
+        {project.fulldesc && (
+          <div>
+            <h2 className="text-2xl font-bold font-abel mb-4">Description</h2>
+            <p className="text-lg font-abel leading-relaxed">
+              {project.fulldesc}
+            </p>
+          </div>
+        )}
+        {/* Highlights */}
+        {project.highlights?.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold font-abel mb-4">Highlights</h2>
+            <ul className="list-disc pl-6 space-y-2 text-lg font-abel">
+              {project.highlights.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Impact */}
+        {project.impact?.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold font-abel mb-4">Impact</h2>
+            <ul className="list-disc pl-6 space-y-2 text-lg font-abel">
+              {project.impact.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
       {/* 🔄 Horizontal Scroll Section */}
       <section
         ref={scrollSectionRef}
