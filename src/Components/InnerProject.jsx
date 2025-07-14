@@ -25,15 +25,11 @@ function InnerProject() {
       }, 100); // short delay to let images/fonts settle
       return () => clearTimeout(timer);
     }
-  
-    // 👇 All your GSAP + ScrollTrigger code goes here
-    window.scrollTo(0, 0);
-    ScrollTrigger.killAll();
-  
+
     if (!bannerRef.current || !titleRef.current) return;
-  
+
     const image = bannerRef.current.querySelector("img");
-  
+
     gsap.fromTo(
       image,
       { scale: 1.2, y: 0 },
@@ -49,10 +45,10 @@ function InnerProject() {
         },
       }
     );
-  
+
     const scrollContainer = scrollContainerRef.current;
     const scrollSection = scrollSectionRef.current;
-  
+
     gsap.to(scrollContainer, {
       x: () => -(scrollContainer.scrollWidth - window.innerWidth),
       ease: "none",
@@ -66,12 +62,9 @@ function InnerProject() {
         invalidateOnRefresh: true,
       },
     });
-  
-    ScrollTrigger.refresh();
-  
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+
+    // return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, [loadTwice]);
-  
 
   if (!project) {
     return (
@@ -166,7 +159,12 @@ function InnerProject() {
         )}
       </div>
 
-      <div className="fixed top-0 left-20 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50">
+      {/* 🔄 Horizontal Scroll Section */}
+      <section
+        ref={scrollSectionRef}
+        className="w-full  h-screen relative overflow-hidden"
+      >
+        <div className="fixed top-0 left-20 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-40 overflow-hidden">
             {project.title}
           </h1>
@@ -221,14 +219,9 @@ function InnerProject() {
           </div>
         </div>
 
-      {/* 🔄 Horizontal Scroll Section */}
-      <section
-        ref={scrollSectionRef}
-        className="w-full  h-screen relative overflow-hidden"
-      >
         <div
           ref={scrollContainerRef}
-          className="flex gap-8 px-20 mr-30 mt-10 py-20 overflow-hidden"
+          className="flex gap-8 px-20 mt-10 py-20 overflow-hidden"
           style={{ width: "max-content" }}
         >
           {project.images?.map((img, idx) => (
