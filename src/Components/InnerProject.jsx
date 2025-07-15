@@ -96,7 +96,7 @@ function InnerProject() {
   return (
     <div className="bg-[#FFB91A] text-[#1a1a1a] md:px-10 overflow-x-hidden">
       {/* 🔶 Banner */}
-      <div className="relative w-full h-full md:h-[60vh] lg:h-[65vh] 2xl:h-[80vh] mt-26 md:rounded-2xl overflow-hidden bg-black">
+      <div className="relative w-full h-full md:h-[60vh] lg:h-[65vh] 2xl:h-[80vh] mt-40 md:rounded-2xl overflow-hidden bg-black">
         <img
           src={project.banner || project.images?.[0]}
           alt="project-banner"
