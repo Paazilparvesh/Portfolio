@@ -420,7 +420,7 @@ function InnerProject() {
           <div>
             <h2 className="text-2xl font-bold font-abel mt-3 mb-2">Description</h2>
             <p className="text-sm font-abel leading-relaxed">
-              {project.fulldesc}
+              {project.fulldesc.slice(0, 400) + "..."}
             </p>
           </div>
         </div>
