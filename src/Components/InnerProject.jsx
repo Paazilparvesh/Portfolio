@@ -334,7 +334,7 @@ function InnerProject() {
 
     if (container && section) {
       gsap.to(container, {
-        x: () => -container.scrollWidth - window.innerWidth,
+        x: () => -(container.scrollWidth - window.innerWidth) ,
         ease: "none",
         scrollTrigger: {
           trigger: section,
