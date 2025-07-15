@@ -29,7 +29,7 @@ export default function Contact() {
       sm:w-28 sm:h-28 
       md:w-36 md:h-36 
       xl:w-48 xl:h-48
-      2xl:w-56 2xl:h-56
+      2xl:w-36 2xl:h-36
       bg-[#a95847] 
       rounded-full 
       flex items-center justify-center 
@@ -52,7 +52,7 @@ export default function Contact() {
     "
         >
           <Link to="/contact">
-            <span className="text-[#fde3a7] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold uppercase tracking-wide font-abel">
+            <span className="text-[#fde3a7] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-lg font-bold uppercase tracking-wide font-abel">
               Open For Work
             </span>
           </Link>

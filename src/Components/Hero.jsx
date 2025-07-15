@@ -179,15 +179,15 @@ const Hero = () => {
       <div className="relative w-full h-full flex items-center md:mt-5 bg-cover bg-center bg-no-repeat px-6 sm:px-10 md:px-20 pb-[140px] md:pt-[140px]">
         <div className="relative flex flex-col items-start z-10 max-w-screen-xl mx-auto w-full lg:w-1/2 text-center">
           {/* 🅰 Hero Title */}
-          <p className="w-full text-center md:text-left text-white font-helvetica text-sm sm:text-base md:text-lg xl:text-3xl tracking-widest mb-2">
+          <p className="w-full text-center md:text-left text-white font-helvetica text-sm sm:text-base md:text-lg xl:text-3xl tracking-widest md:mb-2">
             Hello, I’m
           </p>
 
           <h1 className="hero-title w-full text-white md:text-start font-abel text-4xl md:text-[100px] xl:text-[160px] 2xl:text-[180px] font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
-            Safwan <br /> Manas
+            <span className="md:block">Safwan</span> Manas
           </h1>
 
-          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#a95847] text-md md:text-xl xl:text-3xl 2xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
+          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#4d160a] text-md md:text-xl xl:text-3xl 2xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
           Architect | Retail Designer
           </p>
         </div>

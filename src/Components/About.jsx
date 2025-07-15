@@ -167,7 +167,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full md:h-screen bg-[#a95847] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
+      className="w-full md:h-screen bg-[#4d160a] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
       <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 uppercase tracking-wide font-helvetica leading-tight">
         About Me
@@ -208,7 +208,7 @@ const AboutSection = () => {
               <progress
                 ref={(el) => (barsRef.current[i] = el)}
                 max="100"
-                className="w-full h-[8px] sm:h-[10px] rounded overflow-hidden bg-[#fde3a7] 
+                className="w-full h-[8px] sm:h-[10px] rounded overflow-hidden   
                   [&::-webkit-progress-value]:bg-[#fde3a7]
                   [&::-moz-progress-bar]:bg-[#a95847] transition-all duration-1000 ease-in-out"
               ></progress>

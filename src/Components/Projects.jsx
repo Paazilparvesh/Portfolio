@@ -32,7 +32,7 @@ export default function ProjectsScatteredGrid() {
                   />
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/20 md:bg-transparent transition duration-300 ease-in-out flex justify-center items-center">
+                  <div className="absolute inset-0 transition duration-300 ease-in-out flex justify-center items-center">
                     <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-3xl tracking-wide font-abel text-center px-2">
                       {project.title}
                     </span>
