@@ -340,7 +340,7 @@ The concept was built around the idea that each department functions as a home, 
   },
   {
     id: 7,
-    textColor: "#000000", // 🆕 black
+    textColor: "#ffffff", // 🆕 black
     title: "Villamar at the Harbour",
     subtitle: "A Showcase of Values and Visions",
     banner : villamar_image,
