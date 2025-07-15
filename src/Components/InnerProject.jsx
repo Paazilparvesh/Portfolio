@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 function InnerProject() {
   const { id } = useParams();
   const project = ProjectList.find((proj) => proj.id === Number(id));
+  const [loadTwice, setLoadTwice] = useState(false);
 
   const bannerRef = useRef(null);
   const titleRef = useRef(null);
@@ -17,6 +18,14 @@ function InnerProject() {
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
+    // Force a second render after initial mount
+    if (!loadTwice) {
+      const timer = setTimeout(() => {
+        setLoadTwice(true);
+      }, 100); // short delay to let images/fonts settle
+      return () => clearTimeout(timer);
+    }
+
     if (!bannerRef.current || !titleRef.current) return;
 
     const image = bannerRef.current.querySelector("img");
@@ -55,7 +64,7 @@ function InnerProject() {
     });
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  }, []);
+  }, [loadTwice]);
 
   if (!project) {
     return (
@@ -68,7 +77,7 @@ function InnerProject() {
   return (
     <div className="bg-[#FFB91A] text-[#1a1a1a] px-10 overflow-x-hidden">
       {/* 🔶 Banner */}
-      {/* <div
+      <div
         ref={bannerRef}
         className="relative h-[80vh] mt-26 w-full rounded-2xl overflow-hidden bg-black"
       >
@@ -78,7 +87,7 @@ function InnerProject() {
           className="w-full h-full object-fit will-change-transform"
         />
 
-        {/* Scrolling Title
+        {/* Scrolling Title */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <div
             ref={titleRef}
@@ -111,62 +120,6 @@ function InnerProject() {
             overflow-x: hidden;
           }
         `}</style>
-      </div> */}
-
-      <div
-        ref={bannerRef}
-        className="relative h-[80vh] mt-26 w-full rounded-2xl overflow-hidden bg-black"
-      >
-        {project.video ? (
-          <video
-            src={project.video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-fit"
-          />
-        ) : (
-          <img
-            src={project.banner || project.images?.[0]}
-            alt="project-banner"
-            className="w-full h-full object-contain"
-          />
-        )}
-
-        {/* Scrolling Title */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-          <div
-            ref={titleRef}
-            className="w-max flex animate-marquee"
-            style={{ whiteSpace: "nowrap" }}
-          >
-            {[...Array(2)].map((_, i) => (
-              <span
-                key={i}
-                style={{ color: project.textColor }}
-                className="text-[12vw] md:text-[4vw] font-extrabold font-abel uppercase tracking-wider mx-8"
-              >
-                {`${project.title} • `.repeat(8)}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <style>{`
-    @keyframes marquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      animation: marquee 20s linear infinite;
-      display: flex;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-  `}</style>
       </div>
 
       {/* higlights & impact content here */}
@@ -210,7 +163,7 @@ function InnerProject() {
         ref={scrollSectionRef}
         className="w-full  h-screen relative overflow-hidden"
       >
-        <div className="fixed top-0 left-0 w-88 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+        <div className="fixed top-0 left-0 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
             {project.title}
           </h1>
@@ -264,9 +217,7 @@ function InnerProject() {
             </div>
           </div> */}
           <div>
-            <h2 className="text-2xl font-bold font-abel mt-3 mb-2">
-              Description
-            </h2>
+            <h2 className="text-2xl font-bold font-abel mt-3 mb-2">Description</h2>
             <p className="text-sm font-abel leading-relaxed">
               {project.fulldesc}
             </p>
