@@ -258,7 +258,7 @@ gsap.registerPlugin(ScrollTrigger);
 function InnerProject() {
   const { id } = useParams();
   const project = ProjectList.find((proj) => proj.id === Number(id));
-  const [loadTwice, setLoadTwice] = useState(false);
+  const [loadTwice, setLoadTwice] = useState(true);
 
   useEffect(() => {
     if (!loadTwice) {
