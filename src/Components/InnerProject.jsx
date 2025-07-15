@@ -153,7 +153,7 @@ function InnerProject() {
           </div>
         </div>
 
-        <div className="scroll-container flex gap-8 ml-70 px-20 mt-40 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
+        <div className="scroll-container flex gap-8 ml-70 px-20 mt-20 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
           {project.images?.map((img, idx) => (
             <img
               key={idx}
