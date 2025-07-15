@@ -247,7 +247,7 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProjectList from "../Data/ProjectList";
 import gsap from "gsap";
@@ -258,53 +258,73 @@ gsap.registerPlugin(ScrollTrigger);
 function InnerProject() {
   const { id } = useParams();
   const project = ProjectList.find((proj) => proj.id === Number(id));
-  const [loadTwice, setLoadTwice] = useState(true);
 
   useEffect(() => {
-    if (!loadTwice) {
-      const timer = setTimeout(() => setLoadTwice(true), 100);
-      return () => clearTimeout(timer);
+    const bannerImage = document.querySelector(".banner-image");
+    const scrollSection = document.querySelector(".scroll-section");
+    const scrollContainer = document.querySelector(".scroll-container");
+
+    if (!bannerImage || !scrollContainer || !scrollSection) {
+      console.warn("Missing DOM elements for GSAP animations.");
+      return;
     }
 
-    // GSAP animations by class
-    const image = document.querySelector(".banner-image");
-    const scrollContainer = document.querySelector(".scroll-container");
-    const scrollSection = document.querySelector(".scroll-section");
+    console.log("✅ DOM elements found:");
+    console.log("→ scrollSection:", scrollSection);
+    console.log("→ Number of images:", scrollContainer.querySelectorAll("img").length);
+    console.log("→ scrollContainer.scrollWidth:", scrollContainer.scrollWidth);
+    console.log("→ window.innerWidth:", window.innerWidth);
 
-    if (!image || !scrollContainer || !scrollSection) return;
+    const scrollDistance = scrollContainer.scrollWidth - window.innerWidth;
+    console.log("→ Calculated scrollDistance:", scrollDistance);
 
-    gsap.fromTo(
-      image,
-      { scale: 1.2, y: 0 },
-      {
-        scale: 1,
-        y: -50,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".banner-image",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
+    const ctx = gsap.context(() => {
+      // 🔹 Banner Parallax Effect
+      gsap.fromTo(
+        bannerImage,
+        { scale: 1.2, y: 0 },
+        {
+          scale: 1,
+          y: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: bannerImage,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            // markers: true, // Enable for debugging
+          },
+        }
+      );
+
+      // 🔸 Horizontal Scroll
+      if (scrollDistance > 0) {
+        gsap.to(scrollContainer, {
+          x: -scrollDistance,
+          ease: "none",
+          scrollTrigger: {
+            trigger: scrollSection,
+            start: "top top",
+            end: `+=${scrollDistance}`,
+            pin: true,
+            scrub: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            // markers: true,
+          },
+        });
+      } else {
+        console.warn("⛔ Horizontal scroll not applied — content not wide enough.");
       }
-    );
-
-    gsap.to(".scroll-container", {
-      x: () => -(scrollContainer.scrollWidth - window.innerWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".scroll-section",
-        start: "top top",
-        end: () => `+=${scrollContainer.scrollWidth * 2}`,
-        pin: true,
-        scrub: true,
-        anticipatePin: 2,
-        invalidateOnRefresh: true,
-      },
     });
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  }, [loadTwice]);
+    ScrollTrigger.refresh();
+
+    return () => {
+      ctx.revert();
+      console.log("🧹 Cleaned up GSAP ScrollTriggers.");
+    };
+  }, [id]);
 
   if (!project) {
     return (
@@ -316,7 +336,7 @@ function InnerProject() {
 
   return (
     <div className="bg-[#FFB91A] text-[#1a1a1a] px-10 overflow-x-hidden">
-      {/* Banner */}
+      {/* 🔶 Banner */}
       <div className="relative h-[80vh] mt-26 w-full rounded-2xl overflow-hidden bg-black">
         <img
           src={project.banner || project.images?.[0]}
@@ -351,14 +371,13 @@ function InnerProject() {
             animation: marquee 20s linear infinite;
             display: flex;
           }
-
           body {
             overflow-x: hidden;
           }
         `}</style>
       </div>
 
-      {/* Description */}
+      {/* 🔹 Description */}
       <div className="mt-20 max-w-6xl mx-auto text-left space-y-12">
         {project.fulldesc && (
           <div>
@@ -390,18 +409,17 @@ function InnerProject() {
         )}
       </div>
 
-      {/* Horizontal Scroll Section */}
+      {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full h-screen relative overflow-hidden">
         <div
-          className="scroll-container flex gap-8 px-20 mt-10 py-20 overflow-hidden"
-          style={{ width: "max-content" }}
+          className="scroll-container flex gap-8 px-20 mt-10 py-20 overflow-hidden w-max"
         >
           {project.images?.map((img, idx) => (
             <img
               key={idx}
               src={img}
               alt={`project-${project.id}-img-${idx}`}
-              className="h-[80vh] rounded-xl shadow-2xl object-cover transition-transform duration-300"
+              className="w-[60vw] h-[80vh] rounded-xl shadow-2xl object-cover transition-transform duration-300"
             />
           ))}
         </div>
@@ -411,3 +429,4 @@ function InnerProject() {
 }
 
 export default InnerProject;
+
