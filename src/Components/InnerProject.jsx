@@ -346,6 +346,7 @@ function InnerProject() {
           invalidateOnRefresh: true,
         },
       });
+      ScrollTrigger.refresh();
     }
 
     ScrollTrigger.refresh();
