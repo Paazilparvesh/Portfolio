@@ -96,7 +96,7 @@ function InnerProject() {
   return (
     <div className="bg-[#FFB91A] text-[#1a1a1a] md:px-10 overflow-x-hidden">
       {/* 🔶 Banner */}
-      <div className="relative w-full h-full md:h-[80vh] mt-26 md:rounded-2xl overflow-hidden bg-black">
+      <div className="relative w-full h-full md:h-[60vh] lg:h-[65vh] 2xl:h-[80vh] mt-26 md:rounded-2xl overflow-hidden bg-black">
         <img
           src={project.banner || project.images?.[0]}
           alt="project-banner"
@@ -113,7 +113,7 @@ function InnerProject() {
               <span
                 key={i}
                 style={{ color: project.textColor }}
-                className="text-[12vw] md:text-[4vw] font-extrabold font-abel uppercase tracking-wider mx-8"
+                className="text-[8vw] md:text-[6vw] font-extrabold font-abel uppercase tracking-wider mx-8"
               >
                 {`${project.title} • `.repeat(8)}
               </span>
@@ -138,7 +138,7 @@ function InnerProject() {
 
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
-        <div className="fixed top-0 left-0 md:left-5 w-full md:w-80 md:h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+        <div className="fixed top-0 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-80 md:h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
             {project.title}
           </h1>
@@ -153,13 +153,13 @@ function InnerProject() {
           </div>
         </div>
 
-        <div className="scroll-container flex gap-8 ml-70 px-20 mt-10 py-20 overflow-hidden w-max">
+        <div className="scroll-container flex gap-8 ml-70 px-20 mt-10 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
           {project.images?.map((img, idx) => (
             <img
               key={idx}
               src={img}
               alt={`project-${project.id}-img-${idx}`}
-              className="w-[90vw] md:w-[60vw] h-[30vh] md:h-[80vh] mt-60 md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
+              className="w-[90vw] md:w-[80vw] lg:w-[60vw] 2xl:w-[50vw] h-[30vh] md:h-[50vh] lg:h-[70vh] 2xl:h-[70vh] mt-60 md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
             />
           ))}
         </div>
