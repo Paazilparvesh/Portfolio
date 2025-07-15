@@ -275,7 +275,7 @@ function InnerProject() {
     console.log("→ scrollContainer.scrollWidth:", scrollContainer.scrollWidth);
     console.log("→ window.innerWidth:", window.innerWidth);
 
-    const scrollDistance = scrollContainer.scrollWidth - window.innerWidth;
+    const scrollDistance = scrollContainer.scrollWidth - window.innerWidth + 340;
     console.log("→ Calculated scrollDistance:", scrollDistance);
 
     const ctx = gsap.context(() => {
@@ -411,8 +411,22 @@ function InnerProject() {
 
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full h-screen relative overflow-hidden">
+
+        <div className="fixed top-0 left-0 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+          <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
+            {project.title}
+          </h1>
+          <p className="text-xs">Copyright © All rights reserved.</p>
+          <div>
+            <h2 className="text-2xl font-bold font-abel mt-3 mb-2">Description</h2>
+            <p className="text-sm font-abel leading-relaxed">
+              {project.fulldesc}
+            </p>
+          </div>
+        </div>
+
         <div
-          className="scroll-container flex gap-8 px-20 mt-10 py-20 overflow-hidden w-max"
+          className="scroll-container flex gap-8 ml-70 px-20 mt-10 py-20 overflow-hidden w-max"
         >
           {project.images?.map((img, idx) => (
             <img
