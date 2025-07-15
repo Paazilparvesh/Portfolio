@@ -55,10 +55,10 @@ function InnerProject() {
       scrollTrigger: {
         trigger: scrollSection,
         start: "top top",
-        end: () => `+=${scrollContainer.scrollWidth}`,
+        end: () => `+=${scrollContainer.scrollWidth * 2 }`,
         pin: true,
         scrub: true,
-        anticipatePin: 1,
+        anticipatePin: 2,
         invalidateOnRefresh: true,
       },
     });
@@ -161,9 +161,9 @@ function InnerProject() {
       {/* 🔄 Horizontal Scroll Section */}
       <section
         ref={scrollSectionRef}
-        className="w-full  h-screen relative overflow-hidden"
+        className="w-full h-screen relative overflow-hidden"
       >
-        <div className="fixed top-0 left-0 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+        {/* <div className="fixed top-0 left-0 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
             {project.title}
           </h1>
@@ -215,14 +215,14 @@ function InnerProject() {
                 <FaLinkedin />
               </a>
             </div>
-          </div> */}
+          </div>
           <div>
             <h2 className="text-2xl font-bold font-abel mt-3 mb-2">Description</h2>
             <p className="text-sm font-abel leading-relaxed">
               {project.fulldesc}
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div
           ref={scrollContainerRef}
