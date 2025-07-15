@@ -24,7 +24,7 @@ export default function ProjectsScatteredGrid() {
               className={`block group relative ${topOffset}`}
             >
               <div className="w-full relative overflow-hidden">
-                <div className="aspect-[4/5] w-full relative bg-gray-100">
+                <div className="aspect-[4/5] w-full relative bg-transparent">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -32,8 +32,8 @@ export default function ProjectsScatteredGrid() {
                   />
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/20 md:bg-transparent group-hover:bg-black/20 transition duration-300 ease-in-out flex justify-center items-center">
-                    <span className="md:opacity-0 group-hover:opacity-100 text-white font-medium text-2xl md:text-3xl tracking-wide font-abel text-center px-2">
+                  <div className="absolute inset-0 bg-black/20 md:bg-transparent transition duration-300 ease-in-out flex justify-center items-center">
+                    <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-3xl tracking-wide font-abel text-center px-2">
                       {project.title}
                     </span>
                   </div>
