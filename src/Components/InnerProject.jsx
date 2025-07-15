@@ -138,7 +138,7 @@ function InnerProject() {
 
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
-        <div className="fixed top-0 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-80 md:h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+        <div className="fixed top-20 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-80 md:h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
             {project.title}
           </h1>
@@ -153,7 +153,7 @@ function InnerProject() {
           </div>
         </div>
 
-        <div className="scroll-container flex gap-8 ml-70 px-20 mt-10 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
+        <div className="scroll-container flex gap-8 ml-70 px-20 mt-40 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
           {project.images?.map((img, idx) => (
             <img
               key={idx}
