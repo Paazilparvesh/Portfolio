@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
@@ -27,9 +23,9 @@ export default function Contact() {
       pointer-events-auto 
       w-24 h-24 
       sm:w-28 sm:h-28 
-      md:w-36 md:h-36 
-      xl:w-48 xl:h-48
-      2xl:w-36 2xl:h-36
+      md:w-26 md:h-26 
+      xl:w-40 xl:h-40
+      2xl:w-42 2xl:h-42
       bg-[#a95847] 
       rounded-full 
       flex items-center justify-center 
@@ -44,15 +40,17 @@ export default function Contact() {
       sm:bottom-20 
       sm:right-10 
       md:bottom-65 
-      md:right-100 
+      md:right-80
+      lg:bottom-68
+      lg:right-105
       xl:bottom-70 
       xl:right-155
       2xl:bottom-60
-      2xl:right-160
+      2xl:right-170
     "
         >
           <Link to="/contact">
-            <span className="text-[#fde3a7] text-xs sm:text-sm md:text-lg lg:text-xl xl:text-lg font-bold uppercase tracking-wide font-abel">
+            <span className="text-[#fde3a7] text-xs md:text-md xl:text-xl font-bold uppercase tracking-wide font-abel">
               Open For Work
             </span>
           </Link>
@@ -72,7 +70,7 @@ export default function Contact() {
 
         {/* Phone Numbers */}
         <div className="flex flex-col text-lg md:text-xl space-y-2 ">
-        <a
+          <a
             href="tel:+97336070242"
             className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
           >

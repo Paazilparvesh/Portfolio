@@ -82,7 +82,7 @@ function DesktopLayout() {
       </div>
       <div
         ref={containerRef}
-        className="perspective-container bg-[#FFB91A] w-full h-[250vh] relative overflow-hidden"
+        className="perspective-container bg-[#FFB91A] w-full h-[270vh] xl:h-[260vh] relative overflow-hidden"
       >
         {panelData.map(({ id, component: Component }, i) => (
           <div

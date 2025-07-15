@@ -148,13 +148,13 @@ const ContactPage = () => {
         <div className="space-y-6 text-sm md:text-base flex flex-col md:flex-row justify-center">
           <a
             href="mailto:safwanmanas@gmail.com"
-            className="flex items-center gap-2 text-lg md:text-xl hover:underline hover:scale-110 hover:text-yellow-400 transition-all duration-300 font-abel tracking-widest"
+            className="flex items-center gap-2 text-lg md:text-sm lg:text-xl hover:underline hover:scale-110 hover:text-yellow-400 transition-all duration-300 font-abel tracking-widest"
           >
             <FaEnvelope className="w-5 h-5" />
             safwanmanas@gmail.com
           </a>
           {/* Phone Numbers */}
-          <div className="flex flex-col md:flex-row text-lg md:text-xl space-x-5 md:px-5">
+          <div className="flex flex-col md:flex-row text-lg md:text-sm lg:text-lg space-x-5 md:px-5">
             <a
               href="tel:+97336070242"
               className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"
@@ -193,7 +193,7 @@ const ContactPage = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="flex flex-col md:flex-row justify-between text-lg border-t border-white pt-10 -mb-10">
+      <div className="flex flex-col md:flex-row justify-between text-sm lg:text-lg border-t border-white pt-10 -mb-10">
         <div>
           © 2025 Development by{" "}
           <a

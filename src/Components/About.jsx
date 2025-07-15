@@ -174,8 +174,8 @@ const AboutSection = () => {
       </h2>
       <div className="flex flex-col md:flex-row gap-20  md:px-10">
         {/* 📄 Text */}
-        <div className="w-full md:w-1/2">
-          <div className=" text-white text-lg sm:text-md md:text-lg lg:text-lg 2xl:text-2xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify max-w-3xl">
+        <div className="w-full max-w-2xl">
+          <div className=" text-white text-lg sm:text-md md:text-lg lg:text-lg 2xl:text-2xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify">
             <p>
               Hello, I'm Mohamed Safwan, a recent masters graduate in Retail
               Design at Elisava school of design and engineering, a spatial

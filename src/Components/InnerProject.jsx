@@ -94,13 +94,13 @@ function InnerProject() {
   }
 
   return (
-    <div className="bg-[#FFB91A] text-[#1a1a1a] px-10 overflow-x-hidden">
+    <div className="bg-[#FFB91A] text-[#1a1a1a] md:px-10 overflow-x-hidden">
       {/* 🔶 Banner */}
-      <div className="relative h-[80vh] mt-26 w-full rounded-2xl overflow-hidden bg-black">
+      <div className="relative w-full h-full md:h-[80vh] mt-26 md:rounded-2xl overflow-hidden bg-black">
         <img
           src={project.banner || project.images?.[0]}
           alt="project-banner"
-          className="banner-image w-full h-full object-cover will-change-transform"
+          className="banner-image w-full h-full object-contain will-change-transform"
         />
 
         {/* Scrolling Title */}
@@ -137,8 +137,8 @@ function InnerProject() {
       </div>
 
       {/* 🔄 Horizontal Scroll Section */}
-      <section className="scroll-section w-full h-screen relative overflow-hidden">
-        <div className="fixed top-0 left-5 w-80 h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
+      <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
+        <div className="fixed top-0 left-0 md:left-5 w-full md:w-80 md:h-screen bg-[#FFB91A] overflow-hidden flex flex-col justify-center items-start px-5 z-50 ">
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider mt-34- overflow-hidden">
             {project.title}
           </h1>
@@ -159,7 +159,7 @@ function InnerProject() {
               key={idx}
               src={img}
               alt={`project-${project.id}-img-${idx}`}
-              className="w-[60vw] h-[80vh] rounded-xl shadow-2xl object-cover transition-transform duration-300"
+              className="w-[90vw] md:w-[60vw] h-[30vh] md:h-[80vh] mt-60 md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
             />
           ))}
         </div>
