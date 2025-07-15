@@ -49,7 +49,7 @@ import img319 from "/src/assets/Project_Images/Axel Arigato/18.jpg";
 import img401 from "/src/assets/Project_Images/Beatriz Furest/1.jpg";
 import img402 from "/src/assets/Project_Images/Beatriz Furest/2.jpg";
 import img403 from "/src/assets/Project_Images/Beatriz Furest/3.jpg";
-import img404 from "/src/assets/Project_Images/Beatriz Furest/4.jpg";
+// import img404 from "/src/assets/Project_Images/Beatriz Furest/4.jpg";
 import img405 from "/src/assets/Project_Images/Beatriz Furest/5.jpg";
 import img406 from "/src/assets/Project_Images/Beatriz Furest/6.jpg";
 // import img407 from "/src/assets/Project_Images/Beatriz Furest/7.gif"; // Gif
@@ -61,7 +61,7 @@ import img412 from "/src/assets/Project_Images/Beatriz Furest/12.jpg";
 // import img413 from "/src/assets/Project_Images/Beatriz Furest/13.gif"; // Gif
 
 // Ecoalf
-import img501 from "/src/assets/Project_Images/Ecoalf/0.jpg";
+import img501 from "/src/assets/Project_Images/Ecoalf/13.jpg";
 import img502 from "/src/assets/Project_Images/Ecoalf/1.jpg";
 import img503 from "/src/assets/Project_Images/Ecoalf/2.jpg";
 import img504 from "/src/assets/Project_Images/Ecoalf/3.jpg";
@@ -74,7 +74,7 @@ import img510 from "/src/assets/Project_Images/Ecoalf/9.jpg";
 import img511 from "/src/assets/Project_Images/Ecoalf/10.jpg";
 import img512 from "/src/assets/Project_Images/Ecoalf/11.jpg";
 import img513 from "/src/assets/Project_Images/Ecoalf/12.jpg";
-import img514 from "/src/assets/Project_Images/Ecoalf/13.jpg";
+import img514 from "/src/assets/Project_Images/Ecoalf/0.jpg";
 import img515 from "/src/assets/Project_Images/Ecoalf/14.jpg";
 
 // House of 3 walls
@@ -175,7 +175,7 @@ export const projectImages = {
     img401,
     img402,
     img403,
-    img404,
+    // img404,
     img405,
     img406,
     img408,

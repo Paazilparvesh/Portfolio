@@ -21,7 +21,7 @@ export default function Contact() {
       </div>
 
       {/* 🔴 Call to Action Circle Button */}
-      <div className="absolute z-50 inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute z-30 inset-0 flex items-center justify-center pointer-events-none">
         <div
           className="
       pointer-events-auto 

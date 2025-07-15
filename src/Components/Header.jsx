@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-20 py-6 transition-all duration-300
+      className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-20 py-6 transition-all ${isAboutHero ? "flex justify-end" : "" } duration-300
       }`}
     >
       <div
@@ -20,18 +20,18 @@ const Header = () => {
       >
         {/* Logo (conditionally hidden) */}
         {!isAboutHero && (
-          <div className="z-50 flex flex-col justify-center items-end leading-tight hover:scale-105 transition-all duration-300">
-            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-bold uppercase cursor-pointer tracking-wider helvetica-neue">
+          <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300">
+            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[29px] font-bold uppercase cursor-pointer tracking-wider helvetica-neue">
               <Link to="/">SAFWAN MANAS</Link>
             </div>
-            <p className="text-[#a95847] font-light text-sm sm:text-sm md:text-base lg:text-lg -mt-1 tracking-widest text-right font-abel">
+            <p className="text-[#a95847] font-light text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl -mt-1 tracking-widest text-center font-abel">
               <Link to="/">Architect | Retail Designer</Link>
             </p>
           </div>
         )}
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-12 lg:gap-16">
+        {/* <nav className="hidden md:flex items-center gap-12 lg:gap-16">
           <ul className="flex items-center gap-6">
             <li className="uppercase text-white text-base lg:text-lg xl:text-2xl hover:text-[#a95847] hover:scale-105 transition-all duration-300 cursor-pointer">
               <Link to="/">Portfolio</Link>
@@ -48,26 +48,26 @@ const Header = () => {
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* Mobile Burger Icon */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="relative w-8 h-8 flex flex-col justify-between items-center md:hidden z-50 group"
+          className="relative w-10 h-8 flex flex-col justify-between items-center z-50 group cursor-pointer"
           aria-label="Toggle Menu"
         >
           <span
-            className={`block h-0.5 w-full bg-[#fde3a7] transform transition duration-300 ease-in-out ${
+            className={`block h-0.5 md:h-1 w-full bg-[#ffffff] transform transition duration-300 ease-in-out ${
               menuOpen ? "rotate-45 translate-y-[15px]" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-full bg-[#fde3a7] transition-all duration-300 ease-in-out ${
+            className={`block h-0.5 md:h-1 w-full bg-[#ffffff] transition-all duration-300 ease-in-out ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-full bg-[#fde3a7] transform transition duration-300 ease-in-out ${
+            className={`block h-0.5 md:h-1 w-full bg-[#ffffff] transform transition duration-300 ease-in-out ${
               menuOpen ? "-rotate-45 -translate-y-[15px]" : ""
             }`}
           />
