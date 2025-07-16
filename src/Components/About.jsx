@@ -167,15 +167,15 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full md:h-screen bg-[#4d160a] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
+      className="w-full md:h-screen bg-[#a95847] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
-      <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 uppercase tracking-wide font-helvetica leading-tight">
+      <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 uppercase tracking-wide font-inder leading-tight">
         About Me
       </h2>
       <div className="flex flex-col md:flex-row gap-20  md:px-10">
         {/* 📄 Text */}
         <div className="w-full max-w-2xl">
-          <div className=" text-white text-lg sm:text-md md:text-lg lg:text-lg 2xl:text-2xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium font-abel space-y-5 text-justify">
+          <div className=" text-white text-lg sm:text-md md:text-lg lg:text-lg 2xl:text-2xl leading-relaxed md:leading-7 2xl:leading-10 mb-5 2xl:mb-10 font-medium capitalize font-abel space-y-5 text-justify">
             <p>
               Hello, I'm Mohamed Safwan, a recent masters graduate in Retail
               Design at Elisava school of design and engineering, a spatial

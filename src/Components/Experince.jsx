@@ -238,7 +238,7 @@ const EducationSection = () => {
           <a
             href={resume}
             download
-            className="bg-[#4d160a] text-white px-6 py-3 rounded-full hover:bg-[#fde3a7] hover:text-black text-sm md:text-lg lg:text-xl transition-all duration-300 font-medium scale-95 shadow-lg hover:shadow-[#fde3a7]/30 tracking-[2px]"
+            className="bg-[#a95847] text-white px-6 py-3 rounded-full hover:bg-[#fde3a7] hover:text-black text-sm md:text-lg lg:text-xl transition-all duration-300 font-medium scale-95 shadow-lg hover:shadow-[#fde3a7]/30 tracking-[2px]"
           >
             Download Resume
           </a>
@@ -247,7 +247,7 @@ const EducationSection = () => {
         {/* Timeline */}
         <div ref={sectionRef} className="relative flex flex-col items-center">
           {/* Center Line */}
-          <div className="absolute top-0 left-1/2 hidden md:flex w-1 h-full bg-[#4d160a] transform -translate-x-1/2 z-0"></div>
+          <div className="absolute top-0 left-1/2 hidden md:flex w-1 h-full bg-[#a95847] transform -translate-x-1/2 z-0"></div>
 
           {educationData.map((item, index) => {
             const isLeft = index % 2 === 0;
@@ -261,17 +261,17 @@ const EducationSection = () => {
               >
                 {/* Dot */}
                 <div
-                  className={`absolute top-30 hidden md:flex w-5 h-5 bg-[#4d160a] rounded-full z-20 ${
+                  className={`absolute top-30 hidden md:flex w-5 h-5 bg-[#a95847] rounded-full z-20 ${
                     isLeft ? "right-[-11px]" : "left-[-11px]"
                   }`}
                 ></div>
 
                 {/* Content */}
                 <div className="bg-[#fde3a7]/40 rounded-md shadow-md p-6 hover:shadow-lg transition duration-300">
-                  <p className="text-sm mb-1 tracking-wider font-medium text-[#4d160a]">
+                  <p className="text-sm mb-1 tracking-wider font-medium text-[#a95847]">
                     {item.year}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-semibold text-[#111] uppercase tracking-wide mb-1">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#a95847] uppercase tracking-wide mb-1">
                     {item.role}
                   </h3>
                   <p className="italic text-[#555] font-light text-md md:text-lg mb-2">
