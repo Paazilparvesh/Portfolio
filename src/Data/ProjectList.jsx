@@ -169,7 +169,7 @@ import Project02 from "/src/assets/project_thum_02.png";
 import Project03 from "/src/assets/Axel-arigato.gif";
 import Project04 from "/src/assets/Beatriz-Furest.gif";
 import Project05 from "/src/assets/project_thum_05.png";
-import Project06 from "/src/assets/project_thum_06.png";
+import Project06 from "/src/assets/Spotify.gif";
 // import Project07 from "/src/assets/project_thum_07.png";
 import Project07 from "/src/assets/house_of_three.gif";
 import Project08 from "/src/assets/project_thum_08.jpg";

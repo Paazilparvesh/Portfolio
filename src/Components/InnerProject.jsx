@@ -254,7 +254,7 @@ function InnerProject() {
     console.log("→ window.innerWidth:", window.innerWidth);
 
     const scrollDistance =
-      scrollContainer.scrollWidth - window.innerWidth + 380;
+      scrollContainer.scrollWidth - window.innerWidth + 480;
     console.log("→ Calculated scrollDistance:", scrollDistance);
 
     const ctx = gsap.context(() => {
@@ -279,12 +279,32 @@ function InnerProject() {
       // 🔸 Horizontal Scroll
       if (scrollDistance > 0) {
         gsap.to(scrollContainer, {
-          x: -scrollDistance,
+          x: () => {
+            const scrollWidth = scrollContainer.scrollWidth;
+            const windowWidth = window.innerWidth;
+        
+            let offset = 100; // default mobile
+            const width = window.innerWidth;
+        
+            if (width >= 1536) offset = 480;     // 2xl
+            else if (width >= 1280) offset = 480; // xl
+            else if (width >= 1024) offset = 480; // lg
+            else if (width >= 768) offset = 450;  // md
+            else offset = 200;                   // sm
+        
+            const distance = scrollWidth - windowWidth + offset;
+            console.log("📏 scrollWidth:", scrollWidth);
+            console.log("📏 windowWidth:", windowWidth);
+            console.log("📏 offset:", offset);
+            console.log("📏 distance:", distance);
+        
+            return -Math.max(distance, 0);
+          },
           ease: "none",
           scrollTrigger: {
             trigger: scrollSection,
             start: "top top",
-            end: `+=${scrollDistance}`,
+            end: () => `+=${scrollContainer.scrollWidth}`,
             pin: true,
             scrub: true,
             anticipatePin: 1,
@@ -292,6 +312,7 @@ function InnerProject() {
             // markers: true,
           },
         });
+        
       } else {
         console.warn(
           "⛔ Horizontal scroll not applied — content not wide enough."
@@ -349,7 +370,7 @@ function InnerProject() {
             100% { transform: translateX(-50%); }
           }
           .animate-marquee {
-            animation: marquee 20s linear infinite;
+            animation: marquee 25s linear infinite;
             display: flex;
           }
           body {
@@ -360,33 +381,31 @@ function InnerProject() {
 
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
-        <div className="fixed top-20 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-86 md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50">
+        <div className="md:fixed md:top-20 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-110 md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 shadow-2xl">
           {/* Title */}
           <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider">
             {project.title}
           </h1>
-          <p className="text-xs">Copyright © All rights reserved.</p> 
+          <p className="text-xs">Copyright © All rights reserved.</p>
 
           {/* Scrollable Content */}
           <div className="overflow-y-auto mt-4 space-y-4 pr-2 scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent scrollbar-custom">
-          <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="text-md md:text-md text-start"
-      >
-        {project.location ? `${project.location} | ` : ""}
-        {project.year ? `${project.year} | ` : ""}
-        {project.size ? `${project.size}` : ""}
-      </motion.p>
-
-            
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-md md:text-md text-start"
+            >
+              {project.location ? `${project.location} | ` : ""}
+              {project.year ? `${project.year} | ` : ""}
+              {project.size ? `${project.size}` : ""}
+            </motion.p>
 
             {/* Description */}
             <div>
               <h2 className="text-lg font-bold font-abel mb-1">Description</h2>
               <p className="text-sm font-abel leading-relaxed">
-                {project.fulldesc.slice(0, 500) + "..."}
+                {project.fulldesc}
               </p>
             </div>
 
@@ -416,7 +435,7 @@ function InnerProject() {
           </div>
         </div>
 
-        <div className="scroll-container flex gap-8 ml-86 px-20 mt-20 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
+        <div className="scroll-container flex gap-8 ml-110 px-20 mt-20 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
           {project.images?.map((img, idx) => (
             <img
               key={idx}
