@@ -166,8 +166,8 @@
 
 import Project01 from "/src/assets/project_thum_01.png";
 import Project02 from "/src/assets/project_thum_02.png";
-import Project03 from "/src/assets/Project_Images/Axel Arigato/0.jpg";
-import Project04 from "/src/assets/project_thum_04.png";
+import Project03 from "/src/assets/Axel-arigato.gif";
+import Project04 from "/src/assets/Beatriz-Furest.gif";
 import Project05 from "/src/assets/project_thum_05.png";
 import Project06 from "/src/assets/project_thum_06.png";
 // import Project07 from "/src/assets/project_thum_07.png";
@@ -180,6 +180,8 @@ import spotify_gif from "/src/assets/Project_Images/Spotify/10.gif"
 import ikea_video from "/src/assets/Project_Images/IkeaZ/IKEA_FINAL_HD.mp4"
 
 import breatriz_gif from "/src/assets/Project_Images/Beatriz Furest/13.gif"
+
+
 
 import axel_video from "/src/assets/Project_Images/Axel Arigato/video.mp4"
 

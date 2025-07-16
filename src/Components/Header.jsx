@@ -10,7 +10,9 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-20 py-6 transition-all ${isAboutHero ? "flex justify-end" : "" } duration-300
+      className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-20 py-6 transition-all ${
+        isAboutHero ? "flex justify-end" : ""
+      } duration-300
       }`}
     >
       <div
@@ -21,10 +23,10 @@ const Header = () => {
         {/* Logo (conditionally hidden) */}
         {!isAboutHero && (
           <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300">
-            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[29px] font-bold uppercase cursor-pointer tracking-wider helvetica-neue">
+            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl 2xl:text-[29px] font-extrabold uppercase cursor-pointer tracking-wider helvetica-neue">
               <Link to="/">SAFWAN MANAS</Link>
             </div>
-            <p className="text-[#a95847] font-light text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl -mt-1 tracking-widest text-center font-abel">
+            <p className="text-[#a95847] font-extralight text-sm sm:text-sm md:text-lg lg:text-lg 2xl:text-[22px] -mt-1 tracking-widest text-center font-abel">
               <Link to="/">Architect | Retail Designer</Link>
             </p>
           </div>
@@ -117,6 +119,12 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
