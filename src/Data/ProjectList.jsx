@@ -165,31 +165,29 @@
 // export default projectList;
 
 import Project01 from "/src/assets/project_thum_01.png";
-import Project02 from "/src/assets/project_thum_02.png";
+import Project02 from "/src/assets/Agarwal.gif";
 import Project03 from "/src/assets/Axel-arigato.gif";
 import Project04 from "/src/assets/Beatriz-Furest.gif";
-import Project05 from "/src/assets/project_thum_05.png";
+import Project05 from "/src/assets/ikea.gif";
 import Project06 from "/src/assets/Spotify.gif";
 // import Project07 from "/src/assets/project_thum_07.png";
 import Project07 from "/src/assets/house_of_three.gif";
 import Project08 from "/src/assets/project_thum_08.jpg";
 import Project09 from "/src/assets/project_thum_09.jpg";
 
-import spotify_gif from "/src/assets/Project_Images/Spotify/10.gif"
+import spotify_gif from "/src/assets/Project_Images/Spotify/10.gif";
 
-import ikea_video from "/src/assets/Project_Images/IkeaZ/IKEA_FINAL_HD.mp4"
+import ikea_video from "/src/assets/Project_Images/IkeaZ/IKEA_FINAL_HD.mp4";
 
-import breatriz_gif from "/src/assets/Project_Images/Beatriz Furest/13.gif"
+import breatriz_gif from "/src/assets/Project_Images/Beatriz Furest/13.gif";
 
+import axel_video from "/src/assets/Project_Images/Axel Arigato/video.mp4";
 
+import agarwal_image from "/src/assets/Project_Images/Agarwal/3.jpg";
 
-import axel_video from "/src/assets/Project_Images/Axel Arigato/video.mp4"
+import aero_image from "/src/assets/Project_Images/aero/2.jpg";
 
-import agarwal_image from "/src/assets/Project_Images/Agarwal/3.jpg"
-
-import aero_image from "/src/assets/Project_Images/aero/2.jpg"
-
-import villamar_image from "/src/assets/Project_Images/Villamar/4.jpg"
+import villamar_image from "/src/assets/Project_Images/Villamar/4.jpg";
 
 import { projectImages } from "/src/Data/Images.js";
 
@@ -197,7 +195,7 @@ const projectList = [
   {
     id: 1,
     textColor: "#ffffff", // 🆕 black
-    video : axel_video ,
+    video: axel_video,
     image: Project03,
     images: projectImages[3], // all images
     location: "Barcelona",
@@ -221,7 +219,7 @@ const projectList = [
     textColor: "#ffffff", // 🆕 black
     title: "Beatriz Furest",
     subtitle: "Retail Window Display",
-    banner : breatriz_gif,
+    banner: breatriz_gif,
     image: Project04,
     images: projectImages[4], // all images
     location: "Barcelona",
@@ -248,7 +246,7 @@ const projectList = [
     textColor: "#ffffff", // 🆕 black
     title: "Spotify",
     subtitle: "La Rambla Music Hunt",
-    banner : spotify_gif ,
+    banner: spotify_gif,
     image: Project06,
     images: projectImages[8], // all images
     location: "Barcelona",
@@ -271,7 +269,7 @@ const projectList = [
     textColor: "#ffffff", // 🆕 black
     title: "IKEA Z",
     subtitle: "Concept Store for Gen Z",
-    video : ikea_video ,
+    video: ikea_video,
     image: Project05,
     images: projectImages[7], // all images
     location: "Barcelona",
@@ -295,7 +293,7 @@ const projectList = [
   {
     id: 5,
     textColor: "#ffffff", // 🆕 black
-    banner : aero_image ,
+    banner: aero_image,
     image: Project01,
     images: projectImages[1], // all images
     location: "Chennai",
@@ -320,7 +318,7 @@ const projectList = [
   {
     id: 6,
     textColor: "#ffffff",
-    banner: agarwal_image ,
+    banner: agarwal_image,
     image: Project02,
     images: projectImages[2], // all images
     location: "Chennai",
@@ -345,7 +343,7 @@ The concept was built around the idea that each department functions as a home, 
     textColor: "#ffffff", // 🆕 black
     title: "Villamar at the Harbour",
     subtitle: "A Showcase of Values and Visions",
-    banner : villamar_image,
+    banner: villamar_image,
     image: Project08,
     images: projectImages[9], // all images
     location: "Manama, Bahrain",

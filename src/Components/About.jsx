@@ -169,7 +169,7 @@ const AboutSection = () => {
       ref={sectionRef}
       className="w-full md:h-screen bg-[#a95847] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden"
     >
-      <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 uppercase tracking-wide font-inder leading-tight">
+      <h2 className="text-4xl mt-5 md:mt-0 lg:mt-10 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 uppercase tracking-wide font-lato leading-tight">
         About Me
       </h2>
       <div className="flex flex-col md:flex-row gap-20  md:px-10">

@@ -23,10 +23,10 @@ const Header = () => {
         {/* Logo (conditionally hidden) */}
         {!isAboutHero && (
           <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300">
-            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-inder">
+            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-lato">
               <Link to="/">SAFWAN MANAS</Link>
             </div>
-            <p className="text-[#a95847] font-extralight text-sm sm:text-sm md:text-lg lg:text-lg 2xl:text-[17px] -mt-1 tracking-widest text-center uppercase font-inder">
+            <p className="text-[#a95847] font-extralight text-sm sm:text-sm md:text-lg lg:text-lg 2xl:text-[17px] -mt-1 tracking-widest text-center uppercase font-lato">
               <Link to="/">Architect | Retail Designer</Link>
             </p>
           </div>
@@ -119,12 +119,6 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";

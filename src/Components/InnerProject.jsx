@@ -282,22 +282,22 @@ function InnerProject() {
           x: () => {
             const scrollWidth = scrollContainer.scrollWidth;
             const windowWidth = window.innerWidth;
-        
+
             let offset = 100; // default mobile
             const width = window.innerWidth;
-        
-            if (width >= 1536) offset = 480;     // 2xl
+
+            if (width >= 1536) offset = 480; // 2xl
             else if (width >= 1280) offset = 480; // xl
             else if (width >= 1024) offset = 480; // lg
-            else if (width >= 768) offset = 450;  // md
-            else offset = 200;                   // sm
-        
+            else if (width >= 768) offset = 450; // md
+            else offset = 200; // sm
+
             const distance = scrollWidth - windowWidth + offset;
             console.log("📏 scrollWidth:", scrollWidth);
             console.log("📏 windowWidth:", windowWidth);
             console.log("📏 offset:", offset);
             console.log("📏 distance:", distance);
-        
+
             return -Math.max(distance, 0);
           },
           ease: "none",
@@ -312,7 +312,6 @@ function InnerProject() {
             // markers: true,
           },
         });
-        
       } else {
         console.warn(
           "⛔ Horizontal scroll not applied — content not wide enough."

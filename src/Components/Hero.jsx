@@ -183,12 +183,12 @@ const Hero = () => {
             Hello, I’m
           </p>
 
-          <h1 className="hero-title w-full text-white md:text-start font-inder text-4xl md:text-[100px] xl:text-[160px] 2xl:text-[180px] font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
+          <h1 className="hero-title w-full text-white md:text-start font-lato text-4xl md:text-[100px] xl:text-[160px] 2xl:text-[180px] font-extrabold tracking-[4px] md:tracking-[8px] leading-none uppercase transition-all duration-700">
             <span className="md:block">Safwan</span> Manas
           </h1>
 
-          <p className="w-full font-helvetica xl:mt-4 md:ml-10 text-[#a95847] text-md md:text-xl xl:text-3xl 2xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
-          Architect | Retail Designer
+          <p className="w-full font-lato xl:mt-4 md:ml-10 text-[#a95847] text-md md:text-xl xl:text-3xl 2xl:text-4xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
+            Architect | Retail Designer
           </p>
         </div>
         <img
