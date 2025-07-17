@@ -5,18 +5,18 @@ import projectList from "/src/Data/ProjectList";
 export default function ProjectsScatteredGrid() {
   return (
     <section className="w-full bg-[#FFB91A] pt-36 pb-20">
-      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-10 md:mt-40">
+      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-10 lg:mt-40">
         {projectList.map((project, index) => {
           // Apply vertical offset to create a staggered pattern
 
           const topOffset =
             index % 4 === 1
-              ? "lg:mt-20 lg:mx-5 xl:mt-56 xl:mx-15 2xl:mt-70 2xl:mx-0"
+              ? "lg:mt-20 lg:mx-5 xl:mt-56 xl:mx-15 2xl:mt-70"
               : index % 4 === 2
-              ? "lg:-mt-46 lg:mx-10 xl:-mt-40 xl:mx-20 2xl:-mt-30 2xl:mx-0"
+              ? "lg:-mt-46 lg:mx-10 xl:-mt-40 xl:mx-20 2xl:-mt-30"
               : index % 4 === 3
-              ? "lg:mt-23 lg:mx-5 xl:mt-56 xl:mx-4 2xl:mt-20 2xl:mx-0"
-              : "lg:-mt-40 lg:mx-6 xl:-mt-40 xl:mx-6 2xl:-mt-50 2xl:mx-0";
+              ? "lg:mt-23 lg:mx-5 xl:mt-56 xl:mx-4 2xl:mt-20"
+              : "lg:-mt-40 lg:mx-6 xl:-mt-40 xl:mx-6 2xl:-mt-50";
 
           return (
             <Link
