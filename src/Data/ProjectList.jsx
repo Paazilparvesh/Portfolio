@@ -164,7 +164,7 @@
 
 // export default projectList;
 
-import Project01 from "/src/assets/project_thum_01.png";
+import Project01 from "/src/assets/Aero-movement.gif";
 import Project02 from "/src/assets/Agarwal.gif";
 import Project03 from "/src/assets/Axel-arigato.gif";
 import Project04 from "/src/assets/Beatriz-Furest.gif";
@@ -172,8 +172,8 @@ import Project05 from "/src/assets/ikea.gif";
 import Project06 from "/src/assets/Spotify.gif";
 // import Project07 from "/src/assets/project_thum_07.png";
 import Project07 from "/src/assets/house_of_three.gif";
-import Project08 from "/src/assets/project_thum_08.jpg";
-import Project09 from "/src/assets/project_thum_09.jpg";
+import Project08 from "/src/assets/vilammar.gif";
+import Project09 from "/src/assets/eco-alf.gif";
 
 import spotify_gif from "/src/assets/Project_Images/Spotify/10.gif";
 

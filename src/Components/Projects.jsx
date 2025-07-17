@@ -11,12 +11,12 @@ export default function ProjectsScatteredGrid() {
 
           const topOffset =
             index % 4 === 1
-              ? "lg:mt-20 lg:mx-5 xl:mt-56 xl:mx-15 2xl:mt-70 2xl:mx-20"
+              ? "lg:mt-20 lg:mx-5 xl:mt-56 xl:mx-15 2xl:mt-70 2xl:mx-0"
               : index % 4 === 2
-              ? "lg:-mt-46 lg:mx-10 xl:-mt-40 xl:mx-20 2xl:-mt-30 2xl:mx-10"
+              ? "lg:-mt-46 lg:mx-10 xl:-mt-40 xl:mx-20 2xl:-mt-30 2xl:mx-0"
               : index % 4 === 3
-              ? "lg:mt-23 lg:mx-5 xl:mt-56 xl:mx-4 2xl:mt-20 2xl:mx-15"
-              : "lg:-mt-40 lg:mx-6 xl:-mt-40 xl:mx-6 2xl:-mt-50 2xl:mx-6";
+              ? "lg:mt-23 lg:mx-5 xl:mt-56 xl:mx-4 2xl:mt-20 2xl:mx-0"
+              : "lg:-mt-40 lg:mx-6 xl:-mt-40 xl:mx-6 2xl:-mt-50 2xl:mx-0";
 
           return (
             <Link
