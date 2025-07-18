@@ -110,7 +110,7 @@ const AboutSection = () => {
               <progress
                 ref={(el) => (barsRef.current[i] = el)}
                 max="100"
-                className="w-full h-[8px] sm:h-[10px] rounded overflow-hidden bg-[#fde3a7] 
+                className="w-full h-[8px] sm:h-[10px] rounded overflow-hidden bg-[#fde3a7]
                   [&::-webkit-progress-value]:bg-[#fde3a7]
                   [&::-moz-progress-bar]:bg-[#a95847] transition-all duration-1000 ease-in-out"
               ></progress>

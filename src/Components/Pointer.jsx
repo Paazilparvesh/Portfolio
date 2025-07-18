@@ -1,4 +1,3 @@
-// src/components/PointerFollower.jsx
 import { useEffect } from "react";
 import gsap from "gsap";
 

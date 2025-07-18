@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inder&family=Lato:wght@400;700&family=Onest:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inder&family=Lato:wght@400;700&family=Onest:wght@400;600;700&display=swap");
 @import "tailwindcss";
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue-Regular.woff2') format('woff2');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -70,7 +70,6 @@ body::-webkit-scrollbar {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-
 .font-abel {
   font-family: "Abel", sans-serif;
 }
@@ -79,27 +78,22 @@ body::-webkit-scrollbar {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-
 .helvetica-neue {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 /* Example CSS classes */
 .font-onest {
-  font-family: 'Onest', sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 .font-lato {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .font-inder {
-  font-family: 'Inder', sans-serif;
+  font-family: "Inder", sans-serif;
 }
-
-
-
 
 /* src/index.css */
 
@@ -108,15 +102,15 @@ body::-webkit-scrollbar {
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #FFB91A; /* beige */
+  background: #ffb91a; /* beige */
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #FFB91A; /* black */
+  background-color: #ffb91a; /* black */
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background-color: #FFB91A; /* yellow on hover */
+  background-color: #ffb91a; /* yellow on hover */
 }

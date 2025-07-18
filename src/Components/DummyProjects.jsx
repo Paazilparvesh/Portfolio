@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import projectList from "../Data/ProjectList";
 
-export default function ProjectsSection() {
+export default function ProjectsCorosal() {
   const hoverRefs = useRef([]);
   const imageRefs = useRef([]);
   const scrollWrapperRef = useRef(null);

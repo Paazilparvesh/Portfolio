@@ -1,11 +1,9 @@
-import useIsDesktop from "/src/Hooks/isDesktop.jsx"; // adjust path
-// import Header from "./Header";
+import useIsDesktop from "/src/Hooks/isDesktop.jsx";
 import Hero from "./Hero";
 import About from "./About";
 import Experince from "./Experince";
 import Project from "./Projects";
 import Contact from "./Contact";
-// import Pagination from "./Pagination"; // optional
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -100,9 +98,6 @@ function DesktopLayout() {
 
   return (
     <div className="bg-[#FFB91A]">
-      {/* <div className="relative z-50">
-        <Header />
-      </div> */}
       <div id="home">
         <Hero />
       </div>
