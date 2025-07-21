@@ -21,6 +21,99 @@ function InnerProject() {
     window.scrollTo({ top: 0 });
   }, []);
 
+  // useEffect(() => {
+  //   const bannerImage = document.querySelector(".banner-image");
+  //   const scrollSection = document.querySelector(".scroll-section");
+  //   const scrollContainer = document.querySelector(".scroll-container");
+
+  //   if (!bannerImage || !scrollContainer || !scrollSection) {
+  //     console.warn("Missing DOM elements for GSAP animations.");
+  //     return;
+  //   }
+
+  //   console.log("✅ DOM elements found:");
+  //   console.log("→ scrollSection:", scrollSection);
+  //   console.log(
+  //     "→ Number of images:",
+  //     scrollContainer.querySelectorAll("img").length
+  //   );
+  //   console.log("→ scrollContainer.scrollWidth:", scrollContainer.scrollWidth);
+  //   console.log("→ window.innerWidth:", window.innerWidth);
+
+  //   const scrollDistance =
+  //     scrollContainer.scrollWidth - window.innerWidth + 480;
+  //   console.log("→ Calculated scrollDistance:", scrollDistance);
+
+  //   const ctx = gsap.context(() => {
+  //     // 🔹 Banner Parallax Effect
+  //     gsap.fromTo(
+  //       bannerImage,
+  //       { scale: 1.2, y: 0 },
+  //       {
+  //         scale: 1,
+  //         y: -50,
+  //         ease: "none",
+  //         scrollTrigger: {
+  //           trigger: bannerImage,
+  //           start: "top top",
+  //           end: "bottom top",
+  //           scrub: true,
+  //           // markers: true, // Enable for debugging
+  //         },
+  //       }
+  //     );
+
+  //     // 🔸 Horizontal Scroll
+  //     if (scrollDistance > 0) {
+  //       gsap.to(scrollContainer, {
+  //         x: () => {
+  //           const scrollWidth = scrollContainer.scrollWidth;
+  //           const windowWidth = window.innerWidth;
+
+  //           let offset = 100; // default mobile
+  //           const width = window.innerWidth;
+
+  //           if (width >= 1536) offset = 480; // 2xl
+  //           else if (width >= 1280) offset = 480; // xl
+  //           else if (width >= 1024) offset = 480; // lg
+  //           else if (width >= 768) offset = 450; // md
+  //           else offset = 200; // sm
+
+  //           const distance = scrollWidth - windowWidth + offset;
+  //           console.log("📏 scrollWidth:", scrollWidth);
+  //           console.log("📏 windowWidth:", windowWidth);
+  //           console.log("📏 offset:", offset);
+  //           console.log("📏 distance:", distance);
+
+  //           return -Math.max(distance, 0);
+  //         },
+  //         ease: "none",
+  //         scrollTrigger: {
+  //           trigger: scrollSection,
+  //           start: "top top",
+  //           end: () => `+=${scrollContainer.scrollWidth}`,
+  //           pin: true,
+  //           scrub: true,
+  //           anticipatePin: 1,
+  //           invalidateOnRefresh: true,
+  //           // markers: true,
+  //         },
+  //       });
+  //     } else {
+  //       console.warn(
+  //         "⛔ Horizontal scroll not applied — content not wide enough."
+  //       );
+  //     }
+  //   });
+
+  //   ScrollTrigger.refresh();
+
+  //   return () => {
+  //     ctx.revert();
+  //     console.log("🧹 Cleaned up GSAP ScrollTriggers.");
+  //   };
+  // }, [id]);
+
   useEffect(() => {
     const bannerImage = document.querySelector(".banner-image");
     const scrollSection = document.querySelector(".scroll-section");
@@ -31,21 +124,33 @@ function InnerProject() {
       return;
     }
 
-    console.log("✅ DOM elements found:");
-    console.log("→ scrollSection:", scrollSection);
-    console.log(
-      "→ Number of images:",
-      scrollContainer.querySelectorAll("img").length
-    );
-    console.log("→ scrollContainer.scrollWidth:", scrollContainer.scrollWidth);
-    console.log("→ window.innerWidth:", window.innerWidth);
+    const scrollWidth = scrollContainer.scrollWidth;
+    const windowWidth = window.innerWidth;
 
-    const scrollDistance =
-      scrollContainer.scrollWidth - window.innerWidth + 480;
+    const width = window.innerWidth;
+
+    // Don't apply horizontal scroll on small screens
+    if (width < 768) {
+      console.log("📱 Mobile device detected — skipping horizontal scroll.");
+      return;
+    }
+
+    const offset =
+      width >= 1536
+        ? 480
+        : width >= 1280
+        ? 480
+        : width >= 1024
+        ? 480
+        : width >= 768
+        ? 450
+        : 200;
+
+    const scrollDistance = scrollWidth - windowWidth + offset;
     console.log("→ Calculated scrollDistance:", scrollDistance);
 
     const ctx = gsap.context(() => {
-      // 🔹 Banner Parallax Effect
+      // 🔹 Banner Parallax
       gsap.fromTo(
         bannerImage,
         { scale: 1.2, y: 0 },
@@ -58,45 +163,23 @@ function InnerProject() {
             start: "top top",
             end: "bottom top",
             scrub: true,
-            // markers: true, // Enable for debugging
           },
         }
       );
 
-      // 🔸 Horizontal Scroll
+      // 🔸 Horizontal Scroll only on large screens
       if (scrollDistance > 0) {
         gsap.to(scrollContainer, {
-          x: () => {
-            const scrollWidth = scrollContainer.scrollWidth;
-            const windowWidth = window.innerWidth;
-
-            let offset = 100; // default mobile
-            const width = window.innerWidth;
-
-            if (width >= 1536) offset = 480; // 2xl
-            else if (width >= 1280) offset = 480; // xl
-            else if (width >= 1024) offset = 480; // lg
-            else if (width >= 768) offset = 450; // md
-            else offset = 200; // sm
-
-            const distance = scrollWidth - windowWidth + offset;
-            console.log("📏 scrollWidth:", scrollWidth);
-            console.log("📏 windowWidth:", windowWidth);
-            console.log("📏 offset:", offset);
-            console.log("📏 distance:", distance);
-
-            return -Math.max(distance, 0);
-          },
+          x: -scrollDistance,
           ease: "none",
           scrollTrigger: {
             trigger: scrollSection,
             start: "top top",
-            end: () => `+=${scrollContainer.scrollWidth}`,
+            end: `+=${scrollWidth}`,
             pin: true,
             scrub: true,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            // markers: true,
           },
         });
       } else {
@@ -125,7 +208,7 @@ function InnerProject() {
   return (
     <div className="bg-[#FFB91A] text-[#1a1a1a] md:px-10 overflow-x-hidden">
       {/* 🔶 Banner */}
-      <div className="relative w-full h-full flex justify-center items-center md:h-[60vh] lg:h-[65vh] 2xl:h-[80vh] mt-40 md:mt-26 md:rounded-2xl overflow-hidden bg-black">
+      <div className="relative w-full h-full flex justify-center items-center md:h-[60vh] lg:h-[65vh] 2xl:h-[80vh] mt-26 md:mt-26 md:rounded-2xl overflow-hidden bg-black">
         {isVideo ? (
           <video
             src={project.video}
@@ -177,9 +260,10 @@ function InnerProject() {
 
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
-        <div className="md:fixed md:top-20 left-0 md:left-5 w-full md:w-60 lg:w-70 2xl:w-110 md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 shadow-2xl">
+        {/* Fixed Left Section */}
+        <div className="md:fixed md:top-30 left-0 md:left-5 w-full md:w-70 xl:w-100 2xl:w-[30vw] md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 md:shadow-2xl">
           {/* Title */}
-          <h1 className="text-black text-wrap text-[12vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider">
+          <h1 className="text-black text-wrap text-[8vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider">
             {project.title}
           </h1>
           <p className="text-xs">Copyright © All rights reserved.</p>
@@ -230,13 +314,14 @@ function InnerProject() {
           </div>
         </div>
 
-        <div className="scroll-container flex gap-8 ml-110 px-20 mt-20 md:mt-30 lg:mt-20 2xl:mt-20 py-20 overflow-hidden w-max">
+        {/* Project Corosal */}
+        <div className="scroll-container flex flex-col md:flex-row gap-8 md:ml-110 md:px-20 md:mt-24 py-10 md:py-20 overflow-visible md:overflow-hidden md:w-max items-center">
           {project.images?.map((img, idx) => (
             <img
               key={idx}
               src={img}
               alt={`project-${project.id}-img-${idx}`}
-              className="w-[90vw] md:w-[80vw] lg:w-[60vw] 2xl:w-[50vw] h-[30vh] md:h-[50vh] lg:h-[70vh] 2xl:h-[70vh] mt-60 md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
+              className="w-[90vw] md:w-[60vw] xl:w-[60vw] 2xl:w-[50vw] h-[30vh] md:h-[50vh] lg:h-[70vh] 2xl:h-[70vh] md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
             />
           ))}
         </div>
