@@ -2,15 +2,15 @@ import { projectImages } from "/src/Data/Images.js";
 
 // Projects.jsx page Gifs
 import Project00 from "/src/assets/Architecture_Block.gif";
-import Project01 from "/src/assets/Aero-movement.gif";
-import Project02 from "/src/assets/Agarwal.gif";
-import Project03 from "/src/assets/Axel-arigato.gif";
-import Project04 from "/src/assets/Beatriz-Furest.gif";
-import Project05 from "/src/assets/ikea.gif";
-import Project06 from "/src/assets/Spotify.gif";
-import Project07 from "/src/assets/house_of_three.gif";
-import Project08 from "/src/assets/vilammar.gif";
-import Project09 from "/src/assets/eco-alf.gif";
+import Project01 from "/src/assets/Project_gifs/Updated_Aero.gif";
+import Project02 from "/src/assets/Project_gifs/updated_Agarwal.gif";
+import Project03 from "/src/assets/Project_gifs/Updated_Axel.gif";
+import Project04 from "/src/assets/Project_gifs/Updated_Beatriz.gif";
+import Project05 from "/src/assets/Project_gifs/Updated_Ikea.gif";
+import Project06 from "/src/assets/Project_gifs/Updated_Spotify.gif";
+import Project07 from "/src/assets/Project_gifs/Updated_House.gif";
+import Project08 from "/src/assets/Project_gifs/Updated_Villamar.gif";
+import Project09 from "/src/assets/Project_gifs/Updated_Ecoalf.gif";
 
 // Banner Image
 import agarwal_image from "/src/assets/Project_Images/Agarwal/3.jpg";
