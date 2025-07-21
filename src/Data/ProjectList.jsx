@@ -6,7 +6,7 @@ import Project01 from "/src/assets/Project_gifs/Updated_Aero.gif";
 import Project02 from "/src/assets/Project_gifs/updated_Agarwal.gif";
 import Project03 from "/src/assets/Project_gifs/Updated_Axel.gif";
 import Project04 from "/src/assets/Project_gifs/Updated_Beatriz.gif";
-import Project05 from "/src/assets/Project_gifs/Updated_Ikea.gif";
+import Project05 from "/src/assets/Project_gifs/Updated_ikeaZ.gif";
 import Project06 from "/src/assets/Project_gifs/Updated_Spotify.gif";
 import Project07 from "/src/assets/Project_gifs/Updated_House.gif";
 import Project08 from "/src/assets/Project_gifs/Updated_Villamar.gif";
