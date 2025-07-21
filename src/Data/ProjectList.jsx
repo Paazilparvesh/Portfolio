@@ -1,6 +1,7 @@
 import { projectImages } from "/src/Data/Images.js";
 
 // Projects.jsx page Gifs
+import Project00 from "/src/assets/Architecture_Block.gif";
 import Project01 from "/src/assets/Aero-movement.gif";
 import Project02 from "/src/assets/Agarwal.gif";
 import Project03 from "/src/assets/Axel-arigato.gif";
@@ -14,6 +15,7 @@ import Project09 from "/src/assets/eco-alf.gif";
 // Banner Image
 import agarwal_image from "/src/assets/Project_Images/Agarwal/3.jpg";
 import aero_image from "/src/assets/Project_Images/aero/2.jpg";
+import architecture_image from "/src/assets/Project_Images/Architecture/1.jpg";
 import villamar_image from "/src/assets/Project_Images/Villamar/4.jpg";
 // Banner Gifs
 import spotify_gif from "/src/assets/Project_Images/Spotify/10.gif";
@@ -96,6 +98,33 @@ const projectList = [
       "Sparked spontaneous dance moments, shared social content, and dialogue among strangers.",
     ],
   },
+  // Ecoalf
+  {
+    id: 8,
+    textColor: "#ffffff", // 🆕 black
+    title: "Ecoalf",
+    subtitle: "Conscious Retail",
+    image: Project09,
+    images: projectImages[5], // all images
+    location: "Madrid",
+    year: 2024,
+    size: "80 sqm",
+    fulldesc: `Time repeats every 24 hours. Trends repeat every few years. But our planet? It doesn't get a second chance.
+This conceptual project for Ecoalf, a leader in sustainable fashion, reimagines the retail space not just as a store, but as a collaborative sustainability hub.
+Set within a compact 80 sqm footprint, the project transforms Ecoalf's identity into a platform for collective action, inviting other eco-conscious brands to cohabit and co-create. The spatial strategy encourages brand cross-pollination, with modular retail zones, flexible installations, and digital subscriptions designed to reduce energy consumption and challenge the norms of fast fashion retail.
+Rooted in a mission to promote conscious consumerism, the store acts as both a showcase and a storyteller. Through curated product narratives, interactive educational elements, and shared creative resources, the space becomes a living manifesto: There is no Planet B. Now is the time. And the time is now.`,
+    highlights: [
+      "Collaborative zones for co-branding and shared storytelling.",
+      "Subtle, circular material palette recycled metals, organic textiles, upcycled surfaces.",
+      "Modular display units for rotating collections and low-impact merchandising.",
+      "Space-as-platform: promotes education, subscription-based retail, and planet-first values.",
+    ],
+    impact: [
+      "Proposed a new retail stewardship model encouraging unity among small sustainable brands.",
+      "Advanced the idea of shared financial and creative ecosystems in fashion.",
+      "A spatial narrative that translates conscious consumerism into tangible retail experience.",
+    ],
+  },
   // IkeaZ
   {
     id: 4,
@@ -122,18 +151,64 @@ const projectList = [
       "One of the most enjoyable and versatile projects undertaken during the semester.",
     ],
   },
-  // Aeronautical
+  // Agarwal
+  {
+    id: 6,
+    textColor: "#ffffff",
+    title: "Dr.Agarwal's Eye Clinic",
+    subtitle: "Collaborative courtyards",
+    banner: agarwal_image,
+    image: Project02,
+    images: projectImages[2], // all images
+    location: "Chennai",
+    year: 2014,
+    size: "3,700 sqft",
+    fulldesc: `This interior project for Agarwal Eye Clinics corporate office explored how a linear floor plate could be transformed into a space that fosters both individual identity and collective synergy.
+The concept was built around the idea that each department functions as a home, while the spaces in between act as courtyard shared zones that encourage informal conversations, impromptu meetings, and cross-team collaboration. These courtyards were not only spatial buffers but also creative catalysts: designed with whiteboard walls, they served as flexible canvases for brainstorming, casual meetups, and daily standups. The design promotes a balanced work culture encouraging collaboration without disrupting the retreat-like focus of individual teams. A shared pantry, multi-functional meeting nooks, and circulation zones double as spaces for relaxation and spontaneous exchange.`,
+    highlights: [
+      "Reimagined a linear office layout as a sequence of 'homes' and shared courtyards.",
+      "Materiality and color schemes were tailored to reinforce spatial rhythm and team identity.",
+      "Open yet defined zones to accommodate both retreat and functional needs.",
+    ],
+    impact: [
+      "Created a sense of belonging and ownership within departments while fostering organizational cohesion.",
+      "Offered valuable insights into material selection, color behavior, and scale in interior design.",
+    ],
+  },
+  //Architecture Block
   {
     id: 5,
     textColor: "#ffffff", // 🆕 black
+    title: "Architecture Block @ BSA University",
+    subtitle: "Step into the unknown",
+    banner: architecture_image,
+    image: Project00,
+    images: projectImages[10], // all images
+    location: "Chennai",
+    year: 2013,
+    size: "8,200 sqft",
+    fulldesc: `A sunken ground plane with a system of shifting decks through the built form that acts as public place to gather and collaborate activities. This stepped form allows to gather interest through its mass and the relation of the foreground to the building is reinforced. This built form thus allows for site interaction and enjoys being a node to connect outdoor and indoor activities that materialises the curriculum of architecture-interaction, spatial understanding and forms/materials.`,
+    highlights: [
+      "A spatial narrative that translates conscious student and surrounding experience.",
+      "Revealed the power of built form simplicity in creating rich spatial experiences.",
+    ],
+    impact: [
+      "Strengthened understanding of cohesive interior-exterior integration, end-user analysis, and climatic responsiveness.",
+      "Sparked an ongoing interest in narrative-driven form-making and programmatic innovation.",
+    ],
+  },
+  // Aeronautical Block
+  {
+    id: 5,
+    textColor: "#ffffff", // 🆕 black
+    title: "Aeronautic Block @ BSA University",
+    subtitle: "Dialogue between site and shapes ",
     banner: aero_image,
     image: Project01,
     images: projectImages[1], // all images
     location: "Chennai",
     year: 2012,
     size: "9,000 sqft",
-    title: "Aeronautic Building",
-    subtitle: "Dialogue between site and shapes ",
     fulldesc: `The Aeronautical block is envisioned as three juxtaposed volumes, anchored by a central public courtyard/plaza that extends into the site street, enhancing connectivity between the front and rear. The design makes a strong formal statement the exterior form flows organically into the interior supporting a functional program that includes classrooms, laboratories, seminar halls, staff areas, and an aircraft hangar repurposed as an exhibition space. Conversely, the Architecture block embraces a reverse philosophy: function follows form. Here, spaces are staggered, interconnected, and intentionally shaped to provoke student interaction, promote natural ventilation, and modify the microclimate through thoughtful spatial porosity. The design encourages movement and curiosity while fulfilling academic requirements with flexibility and openness.`,
     highlights: [
       "Central plaza promotes social interaction and visual connectivity.",
@@ -148,28 +223,23 @@ const projectList = [
       "Recognized as best institutional project by Archello and CAF (Chennai architecture Forum).",
     ],
   },
-  // Agarwal
+  // House of Three Walls
   {
-    id: 6,
-    textColor: "#ffffff",
-    banner: agarwal_image,
-    image: Project02,
-    images: projectImages[2], // all images
-    location: "Chennai",
-    year: 2014,
-    size: "3,700 sqft",
-    title: "Dr.Agarwal's Eye Clinic",
-    subtitle: "Collaborative courtyards",
-    fulldesc: `This interior project for Agarwal Eye Clinics corporate office explored how a linear floor plate could be transformed into a space that fosters both individual identity and collective synergy.
-The concept was built around the idea that each department functions as a home, while the spaces in between act as courtyard shared zones that encourage informal conversations, impromptu meetings, and cross-team collaboration. These courtyards were not only spatial buffers but also creative catalysts: designed with whiteboard walls, they served as flexible canvases for brainstorming, casual meetups, and daily standups. The design promotes a balanced work culture encouraging collaboration without disrupting the retreat-like focus of individual teams. A shared pantry, multi-functional meeting nooks, and circulation zones double as spaces for relaxation and spontaneous exchange.`,
+    id: 9,
+    textColor: "#ffffff", // 🆕 black
+    title: "House of Three Walls",
+    subtitle: "Storage optimisation",
+    image: Project07,
+    images: projectImages[6], // all images
+    fulldesc: `A prototype apartment unit, titled The House of Three Walls, explored furniture as a primary design driver. The concept focused on wall-integrated storage and angular furniture geometries, maximizing utility in a compact layout. Simple materials such as birch ply, laminated finishes, and soft-closing mechanisms were skillfully manipulated to create dynamic, flexible forms that could adapt to user needs while maintaining elegance and function.`,
     highlights: [
-      "Reimagined a linear office layout as a sequence of 'homes' and shared courtyards.",
-      "Materiality and color schemes were tailored to reinforce spatial rhythm and team identity.",
-      "Open yet defined zones to accommodate both retreat and functional needs.",
+      "Custom-designed furniture solutions for spatial efficiency and aesthetic balance.",
+      "Integration of angular, storage-optimized elements within living room walls,",
+      "Emphasis on craft, joinery, and modularity to enhance livability and luxury.",
     ],
     impact: [
-      "Created a sense of belonging and ownership within departments while fostering organizational cohesion.",
-      "Offered valuable insights into material selection, color behavior, and scale in interior design.",
+      "Revealed the power of material simplicity in creating rich spatial experiences.",
+      "Key learning moment: the dialogue between furniture and architecture in shaping space.",
     ],
   },
   // Villamar
@@ -192,52 +262,6 @@ The concept was built around the idea that each department functions as a home, 
     impact: [
       "Strengthened understanding of interior detailing, spatial zoning, and user-centric design.",
       "Revealed the power of material simplicity in creating rich spatial experiences.",
-    ],
-  },
-  // Ecoalf
-  {
-    id: 8,
-    textColor: "#ffffff", // 🆕 black
-    image: Project09,
-    images: projectImages[5], // all images
-    location: "Madrid",
-    year: 2024,
-    size: "80 sqm",
-    title: "Ecoalf",
-    subtitle: "Conscious Retail",
-    fulldesc: `Time repeats every 24 hours. Trends repeat every few years. But our planet? It doesn't get a second chance.
-This conceptual project for Ecoalf, a leader in sustainable fashion, reimagines the retail space not just as a store, but as a collaborative sustainability hub.
-Set within a compact 80 sqm footprint, the project transforms Ecoalf's identity into a platform for collective action, inviting other eco-conscious brands to cohabit and co-create. The spatial strategy encourages brand cross-pollination, with modular retail zones, flexible installations, and digital subscriptions designed to reduce energy consumption and challenge the norms of fast fashion retail.
-Rooted in a mission to promote conscious consumerism, the store acts as both a showcase and a storyteller. Through curated product narratives, interactive educational elements, and shared creative resources, the space becomes a living manifesto: There is no Planet B. Now is the time. And the time is now.`,
-    highlights: [
-      "Collaborative zones for co-branding and shared storytelling.",
-      "Subtle, circular material palette recycled metals, organic textiles, upcycled surfaces.",
-      "Modular display units for rotating collections and low-impact merchandising.",
-      "Space-as-platform: promotes education, subscription-based retail, and planet-first values.",
-    ],
-    impact: [
-      "Proposed a new retail stewardship model encouraging unity among small sustainable brands.",
-      "Advanced the idea of shared financial and creative ecosystems in fashion.",
-      "A spatial narrative that translates conscious consumerism into tangible retail experience.",
-    ],
-  },
-  // House of Three Walls
-  {
-    id: 9,
-    textColor: "#ffffff", // 🆕 black
-    image: Project07,
-    images: projectImages[6], // all images
-    title: "House of Three Walls",
-    subtitle: "Storage optimisation",
-    fulldesc: `A prototype apartment unit, titled The House of Three Walls, explored furniture as a primary design driver. The concept focused on wall-integrated storage and angular furniture geometries, maximizing utility in a compact layout. Simple materials such as birch ply, laminated finishes, and soft-closing mechanisms were skillfully manipulated to create dynamic, flexible forms that could adapt to user needs while maintaining elegance and function.`,
-    highlights: [
-      "Custom-designed furniture solutions for spatial efficiency and aesthetic balance.",
-      "Integration of angular, storage-optimized elements within living room walls,",
-      "Emphasis on craft, joinery, and modularity to enhance livability and luxury.",
-    ],
-    impact: [
-      "Revealed the power of material simplicity in creating rich spatial experiences.",
-      "Key learning moment: the dialogue between furniture and architecture in shaping space.",
     ],
   },
 ];

@@ -5,7 +5,7 @@ import projectList from "/src/Data/ProjectList";
 export default function ProjectsScatteredGrid() {
   return (
     <section className="w-full bg-[#FFB91A] pt-36 pb-20">
-      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-10 lg:mt-40">
+      <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-x-8 gap-y-10 -mt-20 md:-mt-10 lg:-mt-20 xl:-mt-10">
         {projectList.map((project, index) => {
           // Random Mixed Grid Layout
 
@@ -31,7 +31,7 @@ export default function ProjectsScatteredGrid() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="absolute top-0 left-0 w-full h-full object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    className="absolute top-0 left-0 w-full h-full p-10 lg:p-10 object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-105"
                   />
 
                   {/* Hover Overlay */}

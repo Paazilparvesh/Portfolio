@@ -117,6 +117,16 @@ import img903 from "/src/assets/Project_Images/Villamar/2.jpg";
 import img904 from "/src/assets/Project_Images/Villamar/3.jpg";
 import img905 from "/src/assets/Project_Images/Villamar/4.jpg";
 
+// Architecture
+import img1010 from "/src/assets/Project_Images/Architecture/-1.jpg";
+import img1011 from "/src/assets/Project_Images/Architecture/0.jpg";
+import img1012 from "/src/assets/Project_Images/Architecture/1.jpg";
+import img1013 from "/src/assets/Project_Images/Architecture/2.jpg";
+import img1014 from "/src/assets/Project_Images/Architecture/3.jpg";
+import img1015 from "/src/assets/Project_Images/Architecture/4.jpg";
+import img1016 from "/src/assets/Project_Images/Architecture/5.jpg";
+import img1017 from "/src/assets/Project_Images/Architecture/6.jpg";
+
 export const projectImages = {
   1: [
     img101,
@@ -227,4 +237,5 @@ export const projectImages = {
     img812,
   ],
   9: [img901, img902, img903, img904, img905],
+  10: [img1010, img1011, img1012, img1013, img1014, img1015, img1016, img1017],
 };
