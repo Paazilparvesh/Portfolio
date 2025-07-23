@@ -4,7 +4,8 @@ import projectList from "/src/Data/ProjectList";
 
 export default function ProjectsScatteredGrid() {
   return (
-    <section className="w-full bg-[#FFB91A] pt-36 pb-20">
+    // <section className="w-full bg-[#FFB91A] pt-36 pb-20">
+    <section className="w-full bg-white pt-36 pb-20">
       <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-x-8 gap-y-10 -mt-20 md:-mt-10 lg:-mt-20 xl:-mt-10">
         {projectList.map((project, index) => {
           // Random Mixed Grid Layout
