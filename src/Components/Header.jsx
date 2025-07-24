@@ -23,10 +23,10 @@ const Header = () => {
         {/* Logo (conditionally hidden) */}
         {!isAboutHero && (
           <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300">
-            <div className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-lato">
+            <div className="text-white text-xs md:text-xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-tanmon">
               <Link to="/">SAFWAN MANAS</Link>
             </div>
-            <p className="text-[#a95847] font-extralight text-sm sm:text-sm md:text-lg lg:text-lg 2xl:text-[17px] -mt-1 tracking-widest text-center uppercase font-lato">
+            <p className="text-[#a95847] font-extralight text-xs md:text-lg lg:text-xl 2xl:text-[14px] md:-mt-1 scale-82 md:scale-80 lg:scale-82 md:tracking-widest text-center uppercase font-ttcommon">
               <Link to="/">Architect | Retail Designer</Link>
             </p>
           </div>
@@ -35,12 +35,12 @@ const Header = () => {
         {/* Mobile Burger Icon */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="relative w-10 h-8 flex flex-col justify-between items-center z-50 group cursor-pointer"
+          className="relative w-5 h-4 md:w-8 md:h-6 flex flex-col justify-between items-center z-50 group cursor-pointer -mt-3 md:mt-0"
           aria-label="Toggle Menu"
         >
           <span
             className={`block h-0.5 md:h-1 w-full bg-[#ffffff] transform transition duration-300 ease-in-out ${
-              menuOpen ? "rotate-45 translate-y-[15px]" : ""
+              menuOpen ? "rotate-45 translate-y-[8px]" : ""
             }`}
           />
           <span
@@ -50,7 +50,7 @@ const Header = () => {
           />
           <span
             className={`block h-0.5 md:h-1 w-full bg-[#ffffff] transform transition duration-300 ease-in-out ${
-              menuOpen ? "-rotate-45 -translate-y-[15px]" : ""
+              menuOpen ? "-rotate-45 -translate-y-[8px]" : ""
             }`}
           />
         </button>

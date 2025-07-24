@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inder&family=Lato:wght@400;700&family=Onest:wght@400;600;700&display=swap");
 @import "tailwindcss";
+
+/* src/assets/fonts/fonts.css */
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/fonts/HelveticaNeue-Regular.woff2") format("woff2");
+  font-family: "TAN Mon Cheri";
+  src: url("/Fonts/tan-mon-cheri.ttf") format("opentype");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Condensed ExtraLight";
+  src: url("/Fonts/Fontspring-DEMO-tt_commons_pro_extralight.otf") format("opentype");
+  font-weight: 200; /* ExtraLight */
   font-style: normal;
 }
 
@@ -78,10 +87,6 @@ body::-webkit-scrollbar {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.helvetica-neue {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 /* Example CSS classes */
 .font-onest {
   font-family: "Onest", sans-serif;
@@ -94,6 +99,15 @@ body::-webkit-scrollbar {
 .font-inder {
   font-family: "Inder", sans-serif;
 }
+
+.font-tanmon {
+  font-family: "TAN Mon Cheri", cursive;
+}
+
+.font-ttcommon{
+  font-family: "TT Commons Condensed ExtraLight", sans-serif;
+}
+
 
 /* src/index.css */
 
