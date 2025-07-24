@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import resume from "/src/assets/cv24.pdf";
+import resume from "/src/assets/Safwan_Resume.pdf";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
