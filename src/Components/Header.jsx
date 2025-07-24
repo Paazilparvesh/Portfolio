@@ -26,7 +26,7 @@ const Header = () => {
             <div className="text-white text-xs md:text-xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-tanmon">
               <Link to="/">SAFWAN MANAS</Link>
             </div>
-            <p className="text-[#a95847] font-extralight text-xs md:text-lg lg:text-xl 2xl:text-[14px] md:-mt-1 scale-82 md:scale-80 lg:scale-82 md:tracking-widest text-center uppercase font-ttcommon">
+            <p className="text-[#a95847] font-extralight text-xs md:text-lg lg:text-xl 2xl:text-[22px] md:-mt-1 scale-82 md:scale-80 lg:scale-82 2xl:scale-100 md:tracking-widest text-center uppercase font-ttcommon">
               <Link to="/">Architect | Retail Designer</Link>
             </p>
           </div>
