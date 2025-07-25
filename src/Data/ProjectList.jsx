@@ -194,7 +194,7 @@ The concept was built around the idea that each department functions as a home, 
     images: projectImages[10], // all images
     location: "Chennai",
     year: 2013,
-    size: "8,200 sqft",
+    size: "1,00,000 sqft",
     fulldesc: `A sunken ground plane with a system of shifting decks through the built form that acts as public place to gather and collaborate activities. This stepped form allows to gather interest through its mass and the relation of the foreground to the building is reinforced. This built form thus allows for site interaction and enjoys being a node to connect outdoor and indoor activities that materialises the curriculum of architecture-interaction, spatial understanding and forms/materials.`,
     highlights: [
       "A spatial narrative that translates conscious student and surrounding experience.",
@@ -217,7 +217,7 @@ The concept was built around the idea that each department functions as a home, 
     images: projectImages[1], // all images
     location: "Chennai",
     year: 2012,
-    size: "9,000 sqft",
+    size: "1,50,000 sqft",
     fulldesc: `The Aeronautical block is envisioned as three juxtaposed volumes, anchored by a central public courtyard/plaza that extends into the site street, enhancing connectivity between the front and rear. The design makes a strong formal statement the exterior form flows organically into the interior supporting a functional program that includes classrooms, laboratories, seminar halls, staff areas, and an aircraft hangar repurposed as an exhibition space. Conversely, the Architecture block embraces a reverse philosophy: function follows form. Here, spaces are staggered, interconnected, and intentionally shaped to provoke student interaction, promote natural ventilation, and modify the microclimate through thoughtful spatial porosity. The design encourages movement and curiosity while fulfilling academic requirements with flexibility and openness.`,
     highlights: [
       "Central plaza promotes social interaction and visual connectivity.",
