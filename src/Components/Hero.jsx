@@ -16,14 +16,15 @@ const Hero = () => {
             <p className="mt-2 lg:mt-4 xl:mt-6">Manas</p>
           </h1>
 
-          <p className="w-full font-ttcommon md:ml-10 lg:ml-26 xl:ml-38 text-[#a95847] text-md md:text-lg lg:text-2xl xl:text-4xl 2xl:text-5xl flex flex-col items-center justify-center text-center font-medium tracking-widest">
-            Architect | Retail Designer
-          </p>
+          <div className="w-full md:ml-10 lg:ml-26 xl:ml-38 text-[#a95847] text-md md:text-lg lg:text-2xl xl:text-4xl 2xl:text-5xl flex items-center justify-center text-center font-medium tracking-widest">
+          <span className="font-ttcommon">Architect</span> <span className="font-light px-2 mb-2">{" | "}</span><span className="font-ttcommon">Retail Designer</span>
+          </div>
         </div>
         <img
           src={profile}
           alt=""
-          className="absolute bottom-0 left-0 md:static w-full lg:w-1/2 xl:px-20 mt-48 transform md:-translate-x-10 lg:translate-x-16 lg:scale-125 "
+          draggable={false}
+          className="absolute bottom-0 left-0 md:static w-full lg:w-1/2 xl:px-20 mt-48 transform md:-translate-x-10 lg:translate-x-16 lg:scale-125  select-none pointer-events-none"
         />
       </div>
     </section>
