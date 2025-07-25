@@ -236,7 +236,7 @@ function InnerProject() {
               <span
                 key={i}
                 style={{ color: project.textColor }}
-                className="text-[8vw] md:text-[5vw] xl:text-[4vw] font-extrabold font-abel uppercase tracking-wider mx-8"
+                className="text-[8vw] md:text-[5vw] xl:text-[4vw] font-extrabold font-ttcommon capitalize tracking-wider mx-8"
               >
                 {`${project.title} • `.repeat(8)}
               </span>
@@ -262,7 +262,7 @@ function InnerProject() {
       {/* 🔄 Horizontal Scroll Section */}
       <section className="scroll-section w-full mt-10 md:mt-0 md:h-screen relative overflow-hidden">
         {/* Fixed Left Section */}
-        <div className="md:fixed md:top-30 left-0 md:left-5 w-full md:w-70 xl:w-100 2xl:w-[30vw] md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 md:shadow-2xl">
+        <div className="md:fixed md:top-30 left-0 md:left-5 w-full md:w-70 xl:w-100 2xl:w-[30vw] md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 md:shadow-2xl pb-20">
           {/* Title */}
           <h1 className="text-black text-wrap text-[8vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider">
             {project.title}
@@ -288,6 +288,18 @@ function InnerProject() {
                 {project.subtitle}
               </p>
             </div>
+
+            {/* Description */}
+            {project.fulldesc?.length > 0 && (
+              <div>
+                <h2 className="text-lg font-bold font-abel mb-1">
+                  Description
+                </h2>
+                <p className=" pl-4 space-y-1 text-sm font-abel">
+                  {project.fulldesc}
+                </p>
+              </div>
+            )}
 
             {/* Highlights */}
             {project.highlights?.length > 0 && (

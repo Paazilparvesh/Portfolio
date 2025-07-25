@@ -76,7 +76,7 @@ const ContactPage = () => {
   return (
     <section className="min-h-screen w-full bg-black text-white px-6 md:px-20 py-20 font-['Helvetica']">
       {/* Header */}
-      <h1 className="text-5xl md:text-7xl lg:text-9xl 2xl:text-[200px] text-[#FFB91A] mt-20 font-bold font-abel mb-16 text-center">
+      <h1 className="text-5xl md:text-7xl lg:text-9xl 2xl:text-[200px] text-[#FFB91A] mt-20 font-bold font-ttcommon mb-16 text-center">
         Contact Me
       </h1>
 
@@ -85,13 +85,13 @@ const ContactPage = () => {
         {/* Form */}
         <form
           onSubmit={sendEmail}
-          className="w-full md:w-1/2 2xl:w-[850px] px-4 my-10 md:px-20 space-y-6"
+          className="w-full md:w-1/2 2xl:w-[850px] px-4 my-10 md:px-20 space-y-6 font-ttcommon"
         >
           <div>
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="Enter Your Name"
               value={formData.name}
               onChange={handleChange}
               className="bg-black border-b border-white focus:outline-none placeholder-white w-full py-2"
@@ -105,7 +105,7 @@ const ContactPage = () => {
             <input
               type="email"
               name="email"
-              placeholder="Email (required)"
+              placeholder="Enter Your Email"
               value={formData.email}
               onChange={handleChange}
               className="bg-black border-b border-white focus:outline-none placeholder-white w-full py-2"
@@ -118,7 +118,7 @@ const ContactPage = () => {
           <div>
             <textarea
               name="message"
-              placeholder="Message (required)"
+              placeholder="Enter Your Message"
               value={formData.message}
               onChange={handleChange}
               className="bg-black border-b border-white focus:outline-none placeholder-white w-full py-2"
@@ -131,7 +131,7 @@ const ContactPage = () => {
 
           <button
             type="submit"
-            className="bg-white hover:bg-[#FFB91A] text-black px-6 py-2 font-semibold transition-all duration-300 hover:scale-110"
+            className="bg-white hover:bg-[#FFB91A] text-black px-6 py-2 font-semibold transition-all duration-300 hover:scale-110 font-ttcommon"
           >
             SUBMIT
           </button>
@@ -154,7 +154,7 @@ const ContactPage = () => {
             safwanmanas@gmail.com
           </a>
           {/* Phone Numbers */}
-          <div className="flex flex-col md:flex-row text-lg md:text-sm lg:text-lg space-x-5 md:px-5">
+          <div className="flex flex-col md:flex-row text-lg md:text-sm lg:text-lg space-x-5 md:px-5 ">
             <a
               href="tel:+97336070242"
               className="hover:text-yellow-400 hover:scale-110 transition-all duration-300"

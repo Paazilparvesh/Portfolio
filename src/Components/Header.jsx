@@ -129,16 +129,16 @@ const Header = () => {
         } duration-300`}
       >
         <div
-          className={`flex items-center ${
+          className={`flex items-center  ${
             isAboutHero ? "justify-center" : "justify-between"
           } relative`}
         >
           {!isAboutHero && (
-            <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300">
+            <div className="z-50 flex flex-col justify-center items-center leading-tight hover:scale-105 transition-all duration-300 -ml-6">
               <div className="text-white text-xs md:text-xl lg:text-2xl 2xl:text-[32px] font-extrabold uppercase cursor-pointer tracking-widest font-tanmon">
                 <Link to="/">SAFWAN MANAS</Link>
               </div>
-              <p className="text-[#a95847] font-extralight text-xs md:text-lg lg:text-xl 2xl:text-[22px] md:-mt-1 scale-82 md:scale-80 lg:scale-82 2xl:scale-100 md:tracking-widest text-center uppercase ">
+              <p className="text-[#a95847] font-extralight text-md md:text-lg lg:text-xl 2xl:text-[27px] -mt-1.5 md:-mt-3 lg:-mt-2 scale-76 md:scale-94 lg:scale-100 2xl:scale-100 md:tracking-widest text-center capitalize ">
                 <Link to="/">
                   <span className="font-ttcommon">Architect</span> {" | "}{" "}
                   <span className="font-ttcommon">Retail Designer</span>

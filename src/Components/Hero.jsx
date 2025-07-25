@@ -16,8 +16,10 @@ const Hero = () => {
             <p className="mt-2 lg:mt-4 xl:mt-6">Manas</p>
           </h1>
 
-          <div className="w-full md:ml-10 lg:ml-26 xl:ml-38 text-[#a95847] text-md md:text-lg lg:text-2xl xl:text-4xl 2xl:text-5xl flex items-center justify-center text-center font-medium tracking-widest">
-          <span className="font-ttcommon">Architect</span> <span className="font-light px-2 mb-2">{" | "}</span><span className="font-ttcommon">Retail Designer</span>
+          <div className="w-full md:ml-10 lg:ml-26 xl:ml-38 text-[#a95847] text-md md:text-lg lg:text-2xl xl:text-4xl 2xl:text-5xl flex items-center justify-center text-center font-medium tracking-widest capitalize">
+            <span className="font-ttcommon">Architect</span>{" "}
+            <span className="font-light px-2 mb-2">{" | "}</span>
+            <span className="font-ttcommon">Retail Designer</span>
           </div>
         </div>
         <img
