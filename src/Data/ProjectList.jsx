@@ -7,6 +7,7 @@ import Project02 from "/src/assets/Project_gifs/updated_Agarwal.gif";
 import Project03 from "/src/assets/Project_gifs/Updated_Axel.gif";
 import Project04 from "/src/assets/Project_gifs/Updated_Beatriz.gif";
 import Project05 from "/src/assets/Project_gifs/Updated_ikeaZ.gif";
+// import Project06 from "/src/assets/Spotify-gif.gif";
 import Project06 from "/src/assets/Project_gifs/Updated_Spotify.gif";
 import Project07 from "/src/assets/Project_gifs/Updated_House.gif";
 import Project08 from "/src/assets/Project_gifs/Updated_Villamar.gif";
@@ -28,7 +29,8 @@ const projectList = [
   // Axel Arigato
   {
     id: 1,
-    textColor: "#ffffff", // 🆕 black
+    cardPadding: "xl:p-0 2xl:p-5",
+    textColor: "#ffffff", // black
     video: axel_video,
     image: Project03,
     images: projectImages[3], // all images
@@ -51,6 +53,7 @@ const projectList = [
   // Beatriz Furest
   {
     id: 2,
+    cardPadding: "xl:p-6 2xl:p-14",
     textColor: "#ffffff", // 🆕 black
     title: "Beatriz Furest",
     subtitle: "An Ode to the Mediterranean",
@@ -78,6 +81,7 @@ const projectList = [
   // Spotify
   {
     id: 3,
+    cardPadding: "xl:p-6 2xl:p-16",
     textColor: "#ffffff", // 🆕 black
     title: "Spotify",
     subtitle: "La Rambla Music hunt",
@@ -101,6 +105,7 @@ const projectList = [
   // Ecoalf
   {
     id: 8,
+    cardPadding: "xl:p-6",
     textColor: "#ffffff", // 🆕 black
     title: "Ecoalf",
     subtitle: "Conscious Retail",
@@ -128,6 +133,7 @@ Rooted in a mission to promote conscious consumerism, the store acts as both a s
   // IkeaZ
   {
     id: 4,
+    cardPadding: "xl:p-6",
     textColor: "#ffffff", // 🆕 black
     title: "IKEA Z",
     subtitle: "A Concept store for Gen Z",
@@ -154,6 +160,7 @@ Rooted in a mission to promote conscious consumerism, the store acts as both a s
   // Agarwal
   {
     id: 6,
+    cardPadding: "xl:p-6",
     textColor: "#ffffff",
     title: "Dr.Agarwal's Eye Clinic",
     subtitle: "Collaborative courtyards",
@@ -178,6 +185,7 @@ The concept was built around the idea that each department functions as a home, 
   //Architecture Block
   {
     id: 5,
+    cardPadding: "xl:p-6",
     textColor: "#ffffff", // 🆕 black
     title: "Architecture Block @ BSA University",
     subtitle: "Step into the unknown",
@@ -200,6 +208,7 @@ The concept was built around the idea that each department functions as a home, 
   // Aeronautical Block
   {
     id: 5,
+    cardPadding: "xl:p-6 2xl:p-16",
     textColor: "#ffffff", // 🆕 black
     title: "Aeronautic Block @ BSA University",
     subtitle: "Dialogue between site and shapes ",
@@ -226,6 +235,7 @@ The concept was built around the idea that each department functions as a home, 
   // House of Three Walls
   {
     id: 9,
+    cardPadding: "xl:p-6",
     textColor: "#ffffff", // 🆕 black
     title: "House of Three Walls",
     subtitle: "Storage optimisation",
@@ -245,6 +255,7 @@ The concept was built around the idea that each department functions as a home, 
   // Villamar
   {
     id: 7,
+    cardPadding: "xl:p-10",
     textColor: "#ffffff", // 🆕 black
     title: "Villamar at the Harbour",
     subtitle: "The twist and turns",

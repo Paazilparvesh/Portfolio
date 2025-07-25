@@ -221,7 +221,8 @@ function InnerProject() {
           <img
             src={project.banner || project.images?.[0]}
             alt="project-banner"
-            className="banner-image w-full h-full object-contain will-change-transform"
+            draggable={false}
+            className="banner-image w-full h-full object-contain will-change-transform  select-none pointer-events-none"
           />
         )}
 
@@ -321,7 +322,8 @@ function InnerProject() {
               key={idx}
               src={img}
               alt={`project-${project.id}-img-${idx}`}
-              className="w-[90vw] md:w-[60vw] xl:w-[60vw] 2xl:w-[50vw] h-[30vh] md:h-[50vh] lg:h-[70vh] 2xl:h-[70vh] md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300"
+              draggable={false}
+              className="w-[90vw] md:w-[60vw] xl:w-[60vw] 2xl:w-[50vw] h-[30vh] md:h-[50vh] lg:h-[70vh] 2xl:h-[70vh] md:mt-0 rounded-xl shadow-2xl object-fit transition-transform duration-300  select-none pointer-events-none"
             />
           ))}
         </div>

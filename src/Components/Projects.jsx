@@ -23,21 +23,22 @@ export default function ProjectsScatteredGrid() {
             <Link
               key={index}
               to={`/project/${project.id}`}
-              className={`block group relative 
-\
-                `}
+              className={`block group relative`}
             >
-              <div className="w-full relative overflow-hidden">
+              <div
+                className={`w-full relative overflow-hidden ${project.cardPadding}`}
+              >
                 <div className="aspect-[4/5] w-full relative bg-transparent">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="absolute top-0 left-0 w-full h-full p-10 lg:p-10 object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    draggable={false}
+                    className="absolute top-0 left-0 w-full h-full p-10 lg:p-10 object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-105  select-none pointer-events-none"
                   />
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 transition duration-300 ease-in-out flex justify-center items-center">
-                    <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-3xl tracking-wide font-abel text-center px-2">
+                    <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-3xl tracking-wide font-abel text-center px-2 -mt-80 md:mt-0">
                       {project.title}
                     </span>
                   </div>
