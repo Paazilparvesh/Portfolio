@@ -292,10 +292,10 @@ function InnerProject() {
             {/* Description */}
             {project.fulldesc?.length > 0 && (
               <div>
-                <h2 className="text-lg font-bold font-abel mb-1">
+                {/* <h2 className="text-lg font-bold font-abel mb-1">
                   Description
-                </h2>
-                <p className=" pl-4 space-y-1 text-sm font-abel">
+                </h2> */}
+                <p className=" text-justify text-md font-abel indent-8">
                   {project.fulldesc}
                 </p>
               </div>
