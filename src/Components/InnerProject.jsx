@@ -264,7 +264,7 @@ function InnerProject() {
         {/* Fixed Left Section */}
         <div className="md:fixed md:top-30 left-0 md:left-5 w-full md:w-70 xl:w-100 2xl:w-[30vw] md:h-[calc(100vh-5rem)] bg-[#FFB91A] flex flex-col px-5 py-4 z-50 md:shadow-2xl pb-20">
           {/* Title */}
-          <h1 className="text-black text-wrap text-[8vw] md:text-[2vw] font-semibold font-abel uppercase tracking-wider">
+          <h1 className="text-black text-wrap text-[8vw] md:text-[2vw] font-semibold font-ttcommon tracking-wider">
             {project.title}
           </h1>
           <p className="text-xs">Copyright © All rights reserved.</p>

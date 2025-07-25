@@ -38,7 +38,7 @@ export default function ProjectsScatteredGrid() {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 transition duration-300 ease-in-out flex justify-center items-center">
-                    <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-3xl tracking-wider font-tanmon text-center px-2 -mt-80 md:mt-0 capitalize">
+                    <span className="md:opacity-0 group-hover:opacity-100 text-black font-medium text-2xl md:text-lg lg:text-xl 2xl:text-xl tracking-wider font-tanmon text-center px-2 -mt-80 md:mt-0 capitalize">
                       {project.title}
                     </span>
                   </div>
@@ -48,7 +48,7 @@ export default function ProjectsScatteredGrid() {
           );
         })}
       </div>
-      <p className="transform translate-y-16 px-2 font-ttcommons sm:text-lg">
+      <p className="transform translate-y-16 px-2 font-ttcommons font-extralight text-gray-600 text-sm">
         Copyright @ All rights reserved
       </p>
     </section>
