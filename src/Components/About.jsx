@@ -66,13 +66,13 @@ const AboutSection = () => {
       ref={sectionRef}
       className="w-full md:h-screen bg-[#a95847] flex flex-col items-center justify-start gap-5 pt-5 px-6 sm:px-10 md:px-6 lg:px-10 2xl:px-20 overflow-hidden"
     >
-      <h2 className="text-4xl mt-5 md:mt-0 lg:mt-5 sm:text-5xl md:text-5xl font-extrabold text-center text-[#fde3a7] mb-4 lg:mb-0 uppercase tracking-wide font-ttcommon leading-tight">
-        About me
-      </h2>
       <div className="flex flex-col md:flex-row gap-20 md:gap-10 w-full 2xl:px-20">
         {/* 📄 Text */}
         <div className="w-full max-w-3xl 2xl:max-w-6xl">
-          <div className=" text-white text-lg md:text-sm lg:text-lg 2xl:text-xl leading-relaxed md:leading-5 lg:leading-6 2xl:leading-7 mb-5 2xl:mb-10 font-medium capitalize font-abel space-y-5 text-justify w-full">
+          <h2 className="text-4xl mt-5 md:mt-0 lg:mt-5 sm:text-5xl md:text-5xl font-extrabold text-left text-[#fde3a7] mb-4 lg:mb-5 uppercase tracking-wide font-ttcommon leading-tight">
+            About me
+          </h2>
+          <div className=" text-[#fde3a7] text-lg md:text-sm lg:text-lg 2xl:text-xl leading-relaxed md:leading-5 lg:leading-6 2xl:leading-7 mb-5 2xl:mb-10 font-medium capitalize font-abel space-y-5 text-justify w-full">
             <p>
               a recent masters graduate in Retail Design at Elisava school of
               design and engineering, a spatial designer and sometimes an
@@ -98,7 +98,7 @@ const AboutSection = () => {
         </div>
 
         {/* 🧠 Skills */}
-        <div className="space-y-8 -mt-12 md:mt-0 mb-10 w-full ">
+        <div className="space-y-8 -mt-12 md:mt-0 mb-10 w-full flex flex-col justify-center max-w-md ">
           {skills.map(({ title, percent }, i) => (
             <div key={i} className="flex flex-col">
               <div className="flex justify-between md:gap-8">

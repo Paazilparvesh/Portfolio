@@ -1,7 +1,7 @@
 import { projectImages } from "/src/Data/Images.js";
 
 // Projects.jsx page Gifs
-import Project00 from "/src/assets/Architecture_Block.gif";
+import Project00 from "/src/assets/Project_gifs/Updated_Architecture.gif";
 import Project01 from "/src/assets/Project_gifs/Updated_Aero.gif";
 import Project02 from "/src/assets/Project_gifs/updated_Agarwal.gif";
 import Project03 from "/src/assets/Project_gifs/Updated_Axel.gif";
@@ -187,7 +187,7 @@ The concept was built around the idea that each department functions as a home, 
     id: 5,
     cardPadding: "xl:p-6",
     textColor: "#ffffff", // 🆕 black
-    title: "Architecture block @ BSA university",
+    title: "Architecture block at BSA university",
     subtitle: "Step into the unknown",
     banner: architecture_image,
     image: Project00,
@@ -210,7 +210,7 @@ The concept was built around the idea that each department functions as a home, 
     id: 5,
     cardPadding: "xl:p-6 2xl:p-16",
     textColor: "#ffffff", // 🆕 black
-    title: "Aeronautic block @ BSA university",
+    title: "Aeronautic block at BSA university",
     subtitle: "Dialogue between site and shapes ",
     banner: aero_image,
     image: Project01,

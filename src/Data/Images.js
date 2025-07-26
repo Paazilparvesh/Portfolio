@@ -1,14 +1,25 @@
 // AERO
-import img101 from "/src/assets/Project_Images/aero/1.jpg";
-import img102 from "/src/assets/Project_Images/aero/2.jpg";
-import img103 from "/src/assets/Project_Images/aero/3.jpg";
-import img104 from "/src/assets/Project_Images/aero/4.jpg";
-import img105 from "/src/assets/Project_Images/aero/5.jpg";
-import img106 from "/src/assets/Project_Images/aero/6.jpg";
-import img107 from "/src/assets/Project_Images/aero/7.jpg";
-import img108 from "/src/assets/Project_Images/aero/8.jpg";
-import img109 from "/src/assets/Project_Images/aero/9.jpg";
-import img110 from "/src/assets/Project_Images/aero/10.jpg";
+import img101 from "/src/assets/Project_Images/aero/0.jpg";
+import img102 from "/src/assets/Project_Images/aero/1-1.jpg";
+import img103 from "/src/assets/Project_Images/aero/1-2.jpg";
+import img104 from "/src/assets/Project_Images/aero/1-3.jpg";
+import img105 from "/src/assets/Project_Images/aero/1.jpg";
+import img106 from "/src/assets/Project_Images/aero/2.jpg";
+import img107 from "/src/assets/Project_Images/aero/3.jpg";
+import img108 from "/src/assets/Project_Images/aero/4.jpg";
+import img109 from "/src/assets/Project_Images/aero/5.jpg";
+import img110 from "/src/assets/Project_Images/aero/6.jpg";
+import img111 from "/src/assets/Project_Images/aero/6.jpg";
+import img112 from "/src/assets/Project_Images/aero/7.jpg";
+import img113 from "/src/assets/Project_Images/aero/8.jpg";
+import img114 from "/src/assets/Project_Images/aero/9.jpg";
+import img115 from "/src/assets/Project_Images/aero/10.jpg";
+import img116 from "/src/assets/Project_Images/aero/11.jpg";
+import img117 from "/src/assets/Project_Images/aero/12.jpg";
+import img118 from "/src/assets/Project_Images/aero/13.jpg";
+import img119 from "/src/assets/Project_Images/aero/14.jpg";
+import img120 from "/src/assets/Project_Images/aero/15.jpg";
+import img121 from "/src/assets/Project_Images/aero/16.jpg";
 
 // Agarwal
 import img201 from "/src/assets/Project_Images/Agarwal/1.jpg";
@@ -118,14 +129,25 @@ import img904 from "/src/assets/Project_Images/Villamar/3.jpg";
 import img905 from "/src/assets/Project_Images/Villamar/4.jpg";
 
 // Architecture
-import img1010 from "/src/assets/Project_Images/Architecture/-1.jpg";
-import img1011 from "/src/assets/Project_Images/Architecture/0.jpg";
-import img1012 from "/src/assets/Project_Images/Architecture/1.jpg";
-import img1013 from "/src/assets/Project_Images/Architecture/2.jpg";
-import img1014 from "/src/assets/Project_Images/Architecture/3.jpg";
-import img1015 from "/src/assets/Project_Images/Architecture/4.jpg";
-import img1016 from "/src/assets/Project_Images/Architecture/5.jpg";
-import img1017 from "/src/assets/Project_Images/Architecture/6.jpg";
+import img1010 from "/src/assets/Project_Images/Architecture/0.jpg";
+import img1011 from "/src/assets/Project_Images/Architecture/1.jpg";
+import img1012 from "/src/assets/Project_Images/Architecture/2.jpg";
+import img1013 from "/src/assets/Project_Images/Architecture/3.jpg";
+import img1014 from "/src/assets/Project_Images/Architecture/4.jpg";
+import img1015 from "/src/assets/Project_Images/Architecture/5.jpg";
+import img1016 from "/src/assets/Project_Images/Architecture/6.jpg";
+import img1017 from "/src/assets/Project_Images/Architecture/7.jpg";
+import img1018 from "/src/assets/Project_Images/Architecture/8.jpg";
+import img1019 from "/src/assets/Project_Images/Architecture/9.jpg";
+import img1020 from "/src/assets/Project_Images/Architecture/10.jpg";
+import img1021 from "/src/assets/Project_Images/Architecture/11.jpg";
+import img1022 from "/src/assets/Project_Images/Architecture/12.jpg";
+import img1023 from "/src/assets/Project_Images/Architecture/13.jpg";
+import img1024 from "/src/assets/Project_Images/Architecture/14.jpg";
+import img1025 from "/src/assets/Project_Images/Architecture/15.jpg";
+import img1026 from "/src/assets/Project_Images/Architecture/16.jpg";
+import img1027 from "/src/assets/Project_Images/Architecture/17.jpg";
+import img1028 from "/src/assets/Project_Images/Architecture/18.jpg";
 
 export const projectImages = {
   1: [
@@ -139,6 +161,17 @@ export const projectImages = {
     img108,
     img109,
     img110,
+    img111,
+    img112,
+    img113,
+    img114,
+    img115,
+    img116,
+    img117,
+    img118,
+    img119,
+    img120,
+    img121,
   ],
   2: [
     img201,
@@ -237,5 +270,25 @@ export const projectImages = {
     img812,
   ],
   9: [img901, img902, img903, img904, img905],
-  10: [img1010, img1011, img1012, img1013, img1014, img1015, img1016, img1017],
+  10: [
+    img1010,
+    img1011,
+    img1012,
+    img1013,
+    img1014,
+    img1015,
+    img1016,
+    img1017,
+    img1018,
+    img1019,
+    img1020,
+    img1021,
+    img1022,
+    img1023,
+    img1024,
+    img1025,
+    img1026,
+    img1027,
+    img1028,
+  ],
 };
